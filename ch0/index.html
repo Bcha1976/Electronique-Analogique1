@@ -1,0 +1,378 @@
+
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chapitre 0 · L&#x27;ingénierie d&#x27;abord · Électronique Analogique 1</title>
+<link rel="stylesheet" href="../style.css">
+<style id="MJX-SVG-styles">
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></head>
+<body>
+<header class="top"><a class="brand" href="../index.html"><span class="brand-k">ENISO 2026/2027</span><span class="brand-t">Électronique Analogique 1</span></a>
+<nav class="nav" aria-label="Menu du site"><a href="../index.html">Accueil</a><a href="../ch0/index.html" class="on" aria-current="page">Cours</a><a href="../interactif/index.html">Interactif</a><a href="../td/index.html">TD énoncés</a><a href="../corriges/index.html">TD corrigés</a><a href="../telechargements/index.html">Téléchargements</a></nav><button class="menu" type="button" aria-label="Sommaire" aria-controls="side" aria-expanded="false" id="menu">☰ Sommaire</button></header>
+<div class="wrap with-side"><aside class="side" id="side" aria-label="Plan"><button class="side-close" type="button" aria-label="Fermer le plan">×</button><div class="side-h">Cours</div><ol class="chaps"><li class="on"><a href="../ch0/index.html" aria-current="page"><span class="n">0</span><span>L’ingénierie d’abord</span></a><ol class="toc"><li><a href="#c0-sec-metier"><span class="tn">0.1</span> Le métier de l’ingénieur</a></li><li><a href="#c0-sec-ecart"><span class="tn">0.2</span> L’écart entre les cours et la pratique</a></li><li><a href="#sec-0-3"><span class="tn">0.3</span> Pourquoi l’analogique compte encore</a></li><li><a href="#c0-sec-faces"><span class="tn">0.4</span> Les deux faces du métier : analyse et conception</a></li><li><a href="#c0-sec-chaine"><span class="tn">0.5</span> La règle du cours : la chaîne de raisonnement</a></li><li><a href="#sec-0-6"><span class="tn">0.6</span> Pourquoi l’analogique est un bon terrain d’entraînement</a></li><li><a href="#c0-sec-programme"><span class="tn">0.7</span> La suite du programme (21 heures)</a></li><li><a href="#sec-0-8"><span class="tn">0.8</span> Sommaire</a></li><li><a href="#sec-0-9"><span class="tn">0.9</span> Exercices</a></li></ol></li><li class=""><a href="../ch1/index.html"><span class="n">1</span><span>Des grandeurs électriques aux modèles linéaires</span></a></li><li class=""><a href="../ch2/index.html"><span class="n">2</span><span>Analyse temporelle des circuits linéaires</span></a></li><li class=""><a href="../ch3/index.html"><span class="n">3</span><span>La diode et ses applications</span></a></li><li class=""><a href="../ch4/index.html"><span class="n">4</span><span>Le transistor bipolaire et sa polarisation</span></a></li><li class=""><a href="../ch5/index.html"><span class="n">5</span><span>Les trois montages amplificateurs de base</span></a></li></ol><div class="side-h">Annexes · hors des 21 heures</div><ol class="chaps"><li class=""><a href="../annA/index.html"><span class="n">A</span><span>Amplificateurs opérationnels et raisonnement dynamique</span></a></li><li class=""><a href="../annB/index.html"><span class="n">B</span><span>Énergie et puissance dans les circuits électroniques</span></a></li><li class=""><a href="../annC/index.html"><span class="n">C</span><span>Redressement de précision : de la diode qui commute à la rétroaction</span></a></li></ol><div class="side-h">Documents</div><ol class="chaps"><li class=""><a href="../telechargements/index.html"><span class="n">↓</span><span>Téléchargements (PDF)</span></a></li><li class=""><a href="../bibliographie/index.html"><span class="n">≡</span><span>Bibliographie</span></a></li></ol></aside><main class="main"><div class="chap-head"><div class="chap-k">CHAPITRE 0</div><h1>L’ingénierie d’abord</h1><p class="chap-kw">Le métier, l’écart entre cours et pratique, et la démarche adoptée par ce cours</p><p class="chap-links"><a href="../EA1_Polycopie_complet.pdf">Polycopié (PDF)</a></p></div><article class="course">
+<div class="box situ"><p class="t">Pourquoi ce chapitre</p>
+<p>Avant d’étudier un composant, regardons la personne qui va le manipuler. Ce chapitre pose ce qu’est le métier d’ingénieur, pourquoi l’analogique reste fondamental dans une industrie tournée vers le numérique, et surtout la démarche que ce cours attend devant chaque nouveau circuit : ne pas commencer par calculer, mais par décider ce qu’il faut savoir.</p>
+</div>
+<section id="plan-du-chapitre" class="level3 unnumbered">
+<h3 class="unnumbered">Plan du chapitre</h3>
+<div class="tw"><table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">§</th>
+<th style="text-align: left;">Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">Le métier de l’ingénieur</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">L’écart entre les cours et la pratique</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.3</td>
+<td style="text-align: left;">Pourquoi l’analogique compte encore</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.4</td>
+<td style="text-align: left;">Les deux faces du métier : analyse et conception</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.5</td>
+<td style="text-align: left;">La règle du cours : la chaîne de raisonnement</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.6</td>
+<td style="text-align: left;">Pourquoi l’analogique est un bon terrain d’entraînement</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.7</td>
+<td style="text-align: left;">La suite du programme</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.8</td>
+<td style="text-align: left;">Sommaire</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.9</td>
+<td style="text-align: left;">Exercices</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="objectifs-dapprentissage" class="level3 unnumbered">
+<h3 class="unnumbered">Objectifs d’apprentissage</h3>
+<p>À la fin de ce chapitre, vous saurez :</p>
+<ol>
+<li><p>définir l’ingénierie comme l’acte de reconnaître un problème, de trouver ce qui manque, de combler l’écart et de vérifier le résultat ;</p></li>
+<li><p>reconnaître lequel des rôles inventeur, chercheur ou technicien correspond à une tâche d’ingénierie donnée ;</p></li>
+<li><p>expliquer, avec un exemple concret, pourquoi le monde physique reste analogique, même dans un système numérique ;</p></li>
+<li><p>distinguer l’analyse (prédire le comportement d’un circuit connu) de la conception (trouver un circuit pour un comportement voulu), et dire pourquoi l’analyse vient en premier ;</p></li>
+<li><p>appliquer la chaîne de raisonnement du cours (question, modèle et validité, régime, abstraction, outil, calcul, vérification) devant tout nouveau circuit.</p></li>
+</ol>
+</section>
+<section id="num0.1ac0-sec-metierle-métier-de-lingénieur" class="level2 unnumbered">
+<h2 id="c0-sec-metier" class="unnumbered"><span class="num">0.1</span>Le métier de l’ingénieur</h2>
+<p>Le mot « ingénieur » évoque plusieurs images à la fois. Trois d’entre elles décrivent chacune une partie réelle du métier.</p>
+<p>L’<strong>inventeur</strong> répond à un besoin par une solution nouvelle : un brevet et un prototype lui suffisent, et l’industrialisation est un autre métier. Le <strong>chercheur</strong> étend ce qui est connu et construit des modèles. Le <strong>technicien</strong> fait fonctionner les systèmes réels : il mesure, répare et maintient les choses en marche.</p>
+<p>Ces trois rôles partagent un même acte : quelqu’un rencontre un problème, le comprend, et produit quelque chose d’utile. C’est cela, le métier d’ingénieur. Selon le problème, vous passerez d’un rôle à l’autre. Le quatrième visage, celui du concepteur, fait l’objet de la section <a href="#c0-sec-faces">0.4</a>.</p>
+</section>
+<section id="num0.2ac0-sec-ecartlécart-entre-les-cours-et-la-pratique" class="level2 unnumbered">
+<h2 id="c0-sec-ecart" class="unnumbered"><span class="num">0.2</span>L’écart entre les cours et la pratique</h2>
+<p>Ce cours enseigne des fondamentaux. Ils forment un langage commun dont aucun ingénieur ne peut se passer. Mais après le diplôme, les problèmes arrivent sans numéro de chapitre : la technologie change sans cesse, et les composants apparaissent puis disparaissent.</p>
+<p>Supposons qu’un circuit contienne un composant que vous n’avez jamais rencontré. « Ce n’était pas au programme » n’est pas une réponse utile. Une réponse utile procède par étapes. Que fait ce composant ? Que savez-vous déjà qui s’applique ? Quel modèle pouvez-vous en tirer ? Que reste-t-il à apprendre, et où : fiche technique, livre, simulation, mesure, collègue, assistant d’intelligence artificielle ? Une fois la chose apprise, comment vérifier que vous l’avez comprise ?</p>
+<div class="box bilan"><p class="t">À retenir</p>
+<p>Apprendre l’ingénierie, ce n’est pas mémoriser une boîte à outils. C’est <strong>reconnaître un problème, trouver ce qui manque, combler l’écart, et vérifier le résultat</strong>. Retenez cette phrase : elle revient dans chaque chapitre du cours.</p>
+</div>
+</section>
+<section id="num0.3asec-0-3pourquoi-lanalogique-compte-encore" class="level2 unnumbered">
+<h2 id="sec-0-3" class="unnumbered"><span class="num">0.3</span>Pourquoi l’analogique compte encore</h2>
+<p>Le numérique est partout ; il est donc légitime de se demander pourquoi étudier encore l’analogique. La réponse tient à l’origine des signaux. Capteurs, microphones, antennes, alimentations et canaux de communication produisent et reçoivent des tensions et des courants qui varient de façon continue dans le temps : des grandeurs analogiques. <strong>Le monde physique est analogique.</strong></p>
+<p>La radio illustre bien ce fait. Nous l’utilisons ici pour ses fonctions, pas pour son histoire (figure <a href="#c0-fig-radio">0.1</a>).</p>
+<figure id="c0-fig-radio"><div class="paper"><img src="img/ch0-1.svg" width="518" height="88" alt="La radio comme carte des fonctions analogiques. Tout ce qui précède le traitement numérique est analogique." loading="lazy"></div>
+<figcaption><b>Figure 0.1.</b> La radio comme carte des fonctions analogiques. Tout ce qui précède le traitement numérique est analogique.</figcaption></figure>
+<p>Amplification, filtrage, oscillation, redressement, détection et interfaçage se trouvent tous entre le monde réel et le moindre calcul numérique. Sans la partie analogique, la partie numérique n’a rien à traiter.</p>
+</section>
+<section id="num0.4ac0-sec-facesles-deux-faces-du-métier-analyse-et-conception" class="level2 unnumbered">
+<h2 id="c0-sec-faces" class="unnumbered"><span class="num">0.4</span>Les deux faces du métier : analyse et conception</h2>
+<p>Revenons au quatrième visage annoncé à la section <a href="#c0-sec-metier">0.1</a>, celui du concepteur. Devant un circuit, l’ingénieur peut chercher à prédire ce qu’il fait, ou chercher le circuit qui fait ce qu’il veut : le métier a deux faces, que deux mots résument (tableau <a href="#c0-tab-faces">0.1</a>).</p>
+<figure class="tab" id="c0-tab-faces"><figcaption><b>Tableau 0.1.</b> Analyse et conception.</figcaption>
+<div class="tw"><table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><strong>Analyse</strong></th>
+<th style="text-align: left;"><strong>Conception</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Démarche</td>
+<td style="text-align: left;">Part d’un circuit connu et prédit ce qu’il va faire.</td>
+<td style="text-align: left;">Part d’un comportement voulu et cherche le circuit qui le réalise.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outils</td>
+<td style="text-align: left;">Lois, équations, modèles, caractéristiques, méthodes temporelles et fréquentielles.</td>
+<td style="text-align: left;">Fiches techniques, simulation, routage, mesure, essais et erreurs.</td>
+</tr>
+</tbody>
+</table></div></figure>
+<p>L’écart entre les deux compte : l’analyse dit ce que fait un circuit, jamais quel circuit construire. Choisir parmi plusieurs solutions valables relève du jugement sous contraintes, la part de l’ingénierie qui ressemble à un art. Ce cours entraîne les deux, l’analyse en premier : juger sans modèles revient à deviner.</p>
+</section>
+<section id="num0.5ac0-sec-chainela-règle-du-cours-la-chaîne-de-raisonnement" class="level2 unnumbered">
+<h2 id="c0-sec-chaine" class="unnumbered"><span class="num">0.5</span>La règle du cours : la chaîne de raisonnement</h2>
+<p>Une habitude prime sur toutes les autres : <strong>ne pas commencer par calculer</strong>. Commencez par décider ce qu’il faut savoir. Puis suivez cette chaîne, à chaque fois (figure <a href="#c0-fig-chaine">0.2</a>).</p>
+<figure id="c0-fig-chaine"><div class="paper"><img src="img/ch0-2.svg" width="581" height="111" alt="La chaîne de raisonnement du cours, en sept étapes. Si le résultat n’est pas plausible, la vérification renvoie au choix du modèle." loading="lazy"></div>
+<figcaption><b>Figure 0.2.</b> La chaîne de raisonnement du cours, en sept étapes. Si le résultat n’est pas plausible, la vérification renvoie au choix du modèle.</figcaption></figure>
+<ul>
+<li><p><strong>Question</strong> : que faut-il savoir, et avec quelle précision ?</p></li>
+<li><p><strong>Modèle et validité</strong> : quelle représentation du composant, et dans quel domaine est-elle valable ?</p></li>
+<li><p><strong>Régime</strong> : continu, petit signal, grand signal, transitoire, permanent ?</p></li>
+<li><p><strong>Abstraction</strong> : peut-on remplacer un bloc par une boîte noire (Thévenin, quadripôle, rétroaction) ?</p></li>
+<li><p><strong>Outil</strong> : quelle loi ou quelle méthode (Kirchhoff, superposition, phaseurs, Laplace, simulation) ?</p></li>
+<li><p><strong>Calcul</strong> : seulement maintenant.</p></li>
+<li><p><strong>Vérification</strong> : le résultat est-il plausible, et les hypothèses du modèle sont-elles respectées ?</p></li>
+</ul>
+<div class="box bilan"><p class="t">À retenir</p>
+<p>Choisissez le modèle valide le plus simple qui donne la précision demandée par le problème, puis vérifiez. <strong>Un modèle n’est pas le circuit</strong> : c’est une représentation choisie dans un but précis. Ses hypothèses doivent être connues avant de faire confiance à sa réponse.</p>
+</div>
+</section>
+<section id="num0.6asec-0-6pourquoi-lanalogique-est-un-bon-terrain-dentraînement" class="level2 unnumbered">
+<h2 id="sec-0-6" class="unnumbered"><span class="num">0.6</span>Pourquoi l’analogique est un bon terrain d’entraînement</h2>
+<p>Un même circuit physique peut être vu à travers plusieurs modèles, d’une description non linéaire détaillée à une description linéaire simple. En travaillant sur des circuits analogiques, vous construisez le jugement nécessaire pour décider quoi calculer, quoi négliger, et si un résultat a un sens physique. Cette habitude se transfère à tous les domaines de l’ingénierie.</p>
+</section>
+<section id="num0.7ac0-sec-programmela-suite-du-programme-21-heures" class="level2 unnumbered">
+<h2 id="c0-sec-programme" class="unnumbered"><span class="num">0.7</span>La suite du programme (21 heures)</h2>
+<ul>
+<li><p><strong>Chapitre 1 : Des grandeurs électriques aux modèles linéaires.</strong> Grandeurs, relations des composants, lois de Kirchhoff ; la diode rend le circuit transcendant ; modèles linéaires et point de fonctionnement ; superposition, Thévenin, Norton ; modèle grand signal par morceaux ; nécessité du petit signal et procédure de linéarisation ; quadripôle.</p></li>
+<li><p><strong>Chapitre 2 : Analyse temporelle des circuits linéaires.</strong> Le RC excité par un signal carré, étudié par quatre méthodes (mesure, équation différentielle, calcul numérique, Fourier et phaseurs) prolongées par la transformée de Laplace ; résonance d’un circuit LC ; puis de l’oscillateur à relaxation à la rétroaction.</p></li>
+<li><p><strong>Chapitre 3 : La diode et ses applications.</strong> Modèle exponentiel, modèles grand signal et petit signal ; redressement, détection de crête, doubleur, clamper, diode de roue libre ; étude de cas d’une LED polarisée ; pont de Graetz, redresseur de précision et détection synchrone.</p></li>
+<li><p><strong>Chapitre 4 : Le transistor bipolaire et sa polarisation.</strong> Caractéristiques, droites de charge, commutation, modèle petit signal en <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.29ex" height="1ex" role="img" focusable="false" viewBox="0 -431 570 442" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D70B" xlink:href="#MJX-TEX-I-1D70B"></use></g></g></g></svg></mjx-container></span> ; classes d’amplification ; circuits de polarisation ; source de courant à Zener, miroir de courant et cascode.</p></li>
+<li><p><strong>Chapitre 5 : Les trois montages amplificateurs de base.</strong> Émetteur commun, collecteur commun et base commune vus comme des quadripôles ; couplage et découplage ; résistance de sortie <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="9.3ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4110.4 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="28" xlink:href="#MJX-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(389,0)"><use data-c="1D6FD" xlink:href="#MJX-TEX-I-1D6FD"></use></g><g data-mml-node="mo" transform="translate(1177.2,0)"><use data-c="2B" xlink:href="#MJX-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(2177.4,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(2677.4,0)"><use data-c="29" xlink:href="#MJX-TEX-N-29"></use></g><g data-mml-node="mstyle" transform="translate(3066.4,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="msub" transform="translate(3233.4,0)"><g data-mml-node="mi"><use data-c="1D45F" xlink:href="#MJX-TEX-I-1D45F"></use></g><g data-mml-node="mi" transform="translate(484,-150) scale(0.707)"><use data-c="1D45C" xlink:href="#MJX-TEX-I-1D45C"></use></g></g></g></g></svg></mjx-container></span> et cascode ; étages en cascade ; limite en haute fréquence (modèle de Giacoletto, effet Miller).</p></li>
+</ul>
+<p>Le chapitre 1 dessine la carte et le chapitre 2 y ajoute le temps. Les chapitres 3 à 5 la parcourent sur des composants réels, la diode puis le transistor bipolaire et ses montages, en n’introduisant la théorie qu’en cas de besoin. Chaque composant suit le même enchaînement : caractéristique, point de fonctionnement et polarisation, modèle petit signal, puis superposition pour extraire les grandeurs du circuit.</p>
+<div class="box open"><p class="t">Le premier réflexe</p>
+<p>Au chapitre 1, la première question ne sera donc pas « quelle équation s’applique ici ? » mais « comment représenter ce circuit pour répondre à la question, efficacement et avec une précision acceptable ? »</p>
+</div>
+</section>
+<section id="num0.8asec-0-8sommaire" class="level2 unnumbered">
+<h2 id="sec-0-8" class="unnumbered"><span class="num">0.8</span>Sommaire</h2>
+<ul>
+<li><p>L’ingénieur reconnaît un problème, trouve ce qui manque, comble l’écart et vérifie le résultat. Inventeur, chercheur et technicien sont trois facettes d’un même acte.</p></li>
+<li><p>Les problèmes réels arrivent sans numéro de chapitre : il faut savoir apprendre un composant nouveau et vérifier qu’on l’a compris.</p></li>
+<li><p>Le monde physique est analogique ; la partie analogique d’un système (amplifier, filtrer, osciller, redresser, détecter, interfacer) précède tout traitement numérique.</p></li>
+<li><p>L’analyse prédit le comportement d’un circuit connu ; la conception cherche un circuit pour un comportement voulu. On apprend l’analyse d’abord.</p></li>
+<li><p>La règle du cours : question, modèle et validité, régime, abstraction, outil, calcul, vérification. Un modèle n’est pas le circuit.</p></li>
+</ul>
+</section>
+<section id="num0.9asec-0-9exercices" class="level2 unnumbered">
+<h2 id="sec-0-9" class="unnumbered"><span class="num">0.9</span>Exercices</h2>
+<ol class="exos" start="1">
+<li><p><strong>Quel rôle ?</strong> Pour chaque tâche, dites si elle relève surtout de l’inventeur, du chercheur ou du technicien, et justifiez en une phrase : (a) dépanner une alimentation qui chauffe ; (b) établir un modèle du bruit d’un capteur ; (c) proposer un dispositif qui recharge un téléphone par la marche.</p></li>
+<li><p><strong>Le monde est analogique.</strong> Choisissez un objet numérique de la vie courante (montre connectée, souris, téléphone). Listez au moins trois fonctions analogiques situées entre le monde physique et son processeur, sur le modèle de la figure <a href="#c0-fig-radio">0.1</a>.</p></li>
+<li><p><strong>Analyse ou conception ?</strong> « Calculer la tension de sortie d’un diviseur donné » et « choisir deux résistances pour obtenir 3,3 V à partir de 5 V ». Laquelle de ces deux tâches est une analyse, laquelle une conception ? Pourquoi la seconde a-t-elle plusieurs bonnes réponses ?</p></li>
+<li><p><strong>La chaîne de raisonnement.</strong> On vous demande la consommation d’une LED alimentée par une pile de 9 V à travers une résistance de 470 Ω (figure <a href="#c0-fig-exo-led-pile">0.3</a>). Avant tout calcul, écrivez ce que vous décidez à chacune des sept étapes de la figure <a href="#c0-fig-chaine">0.2</a>.</p>
+<figure id="c0-fig-exo-led-pile"><div class="paper"><img src="img/ch0-3.svg" width="176" height="116" alt="LED alimentée par une pile de 9 V à travers une résistance de 470 Ω." loading="lazy"></div>
+<figcaption><b>Figure 0.3.</b> LED alimentée par une pile de 9 V à travers une résistance de 470 Ω.</figcaption></figure></li>
+<li><p><strong>Défi : un composant jamais vu.</strong> Une fiche technique décrit un « limiteur de courant à deux bornes » que vous ne connaissez pas. En suivant la démarche de la section <a href="#c0-sec-ecart">0.2</a>, rédigez les questions que vous vous posez, dans l’ordre, et dites où vous chercherez chaque réponse et comment vous vérifierez que vous l’avez comprise.</p></li>
+</ol>
+</section>
+
+</article><nav class="pn" aria-label="Page précédente et suivante"><a class="prev" href="../index.html">← Accueil</a><a class="next" href="../ch1/index.html">Chapitre 1 · Des grandeurs électriques aux modèles linéaires →</a></nav></main></div>
+<footer class="foot"><span>ENISO 2026/2027</span><span>Dr Bassem CHAABANE</span><span>ÉLECTRONIQUE ANALOGIQUE 1</span></footer>
+<div class="foot-more" lang="fr">
+<p>© 2026 Bacem Chaabane · Contenu pédagogique sous licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Les documents de tiers cités (notes d’application, ouvrages, cours) restent la propriété de leurs auteurs et éditeurs.</p>
+<p>Remarques à l’auteur : <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Question%20%E2%80%93%20Chapitre%200%20%C2%B7%20L%27ing%C3%A9nierie%20d%27abord&amp;body=Page%20%3A%20Chapitre%200%20%C2%B7%20L%27ing%C3%A9nierie%20d%27abord%0D%0ASection%2C%20%C3%A9quation%2C%20figure%20ou%20exercice%20%3A%0D%0A%0D%0AMa%20question%20%3A%0D%0A%0D%0A">Question</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Suggestion%20%E2%80%93%20Chapitre%200%20%C2%B7%20L%27ing%C3%A9nierie%20d%27abord&amp;body=Page%20%3A%20Chapitre%200%20%C2%B7%20L%27ing%C3%A9nierie%20d%27abord%0D%0ASection%20concern%C3%A9e%20%3A%0D%0A%0D%0AMa%20suggestion%20%3A%0D%0A%0D%0A">Suggestion</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Signalement%20d%E2%80%99erreur%20%E2%80%93%20Chapitre%200%20%C2%B7%20L%27ing%C3%A9nierie%20d%27abord&amp;body=Page%20%3A%20Chapitre%200%20%C2%B7%20L%27ing%C3%A9nierie%20d%27abord%0D%0ASection%2C%20%C3%A9quation%2C%20figure%20ou%20exercice%20%3A%0D%0A%0D%0ADescription%20de%20l%E2%80%99erreur%20%3A%0D%0A%0D%0ACorrection%20propos%C3%A9e%20%28facultatif%29%20%3A%0D%0A%0D%0A">Signaler une erreur</a></p>
+</div>
+<script>
+(function(){
+  var side=document.getElementById('side'), menu=document.getElementById('menu'), x=side&&side.querySelector('.side-close');
+  function set(o){side.classList.toggle('open',o); if(menu) menu.setAttribute('aria-expanded',String(o)); if(o){var a=side.querySelector('a'); if(a) a.focus();}}
+  if(menu&&side){menu.addEventListener('click',function(){set(!side.classList.contains('open'));});
+    x.addEventListener('click',function(){set(false); menu.focus();});
+    side.addEventListener('click',function(e){if(e.target.closest('a')) set(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&side.classList.contains('open')){set(false); menu.focus();}});}
+  var on=side&&side.querySelector('li.on'); if(on){var r=on.getBoundingClientRect(), s=side.getBoundingClientRect(); if(r.top-s.top>s.height*0.5) side.scrollTop=r.top-s.top-80;}
+  var links=[].slice.call(document.querySelectorAll('.side .toc a[href^="#"]'));
+  if(!links.length) return;
+  var pairs=links.map(function(a){return [document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1))),a];}).filter(function(p){return p[0];});
+  function upd(){var y=window.scrollY+120,cur=null; pairs.forEach(function(p){if(p[0].getBoundingClientRect().top+window.scrollY<=y) cur=p[1];});
+    links.forEach(function(a){a.classList.toggle('cur',a===cur); if(a===cur) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current');});}
+  window.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+})();
+</script><script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('figure .paper img'));
+  if(!imgs.length) return;
+  var dlg=document.createElement('div'); dlg.className='zoom'; dlg.hidden=true;
+  dlg.setAttribute('role','dialog'); dlg.setAttribute('aria-modal','true'); dlg.setAttribute('aria-label','Figure agrandie');
+  dlg.innerHTML='<div class="zoom-bar"><b class="zoom-t"></b><span class="zoom-g">'
+    +'<button type="button" data-z="-1" aria-label="Réduire">−</button><button type="button" data-z="0">Ajuster</button>'
+    +'<button type="button" data-z="1" aria-label="Agrandir">+</button></span>'
+    +'<a class="zoom-o" target="_blank" rel="noopener">Ouvrir l’image seule</a>'
+    +'<button type="button" class="zoom-x" aria-label="Fermer">✕</button></div>'
+    +'<div class="zoom-sc"><div class="zoom-pp"><img alt=""></div></div><div class="zoom-c"></div>';
+  document.body.appendChild(dlg);
+  var im=dlg.querySelector('img'), sc=dlg.querySelector('.zoom-sc'), cap=dlg.querySelector('.zoom-c'),
+      ttl=dlg.querySelector('.zoom-t'), op=dlg.querySelector('.zoom-o'), bx=dlg.querySelector('.zoom-x');
+  var w0=1, h0=1, k=1, fit=1, back=null;
+  function size(){ im.style.width=Math.round(w0*k)+'px'; im.style.height=Math.round(h0*k)+'px'; }
+  function setFit(){ var w=sc.clientWidth-56, h=sc.clientHeight-56; fit=Math.max(0.5,Math.min(4,w/w0,h/h0)); k=fit; size(); }
+  function open(img){
+    back=document.activeElement;
+    w0=+img.getAttribute('width')||img.naturalWidth||400; h0=+img.getAttribute('height')||img.naturalHeight||300;
+    im.src=img.currentSrc||img.src; im.alt=img.alt; op.href=im.src;
+    var fig=img.closest('figure'), fc=fig&&fig.querySelector('figcaption'), sub=img.closest('.sch');
+    var sl=sub&&sub.querySelector('.sl');
+    cap.innerHTML=(sl?sl.innerHTML+' ':'')+(fc?fc.innerHTML:'');
+    var b=fc&&fc.querySelector('b'); ttl.textContent=b?b.textContent.replace(/[.\s]+$/,''):'Figure';
+    dlg.hidden=false; document.body.classList.add('zoomed'); setFit(); sc.scrollTop=0; sc.scrollLeft=0; bx.focus();
+  }
+  function close(){ dlg.hidden=true; document.body.classList.remove('zoomed'); im.removeAttribute('src'); if(back&&back.focus) back.focus(); }
+  imgs.forEach(function(img){
+    var p=img.closest('.paper'); p.classList.add('zoomable');
+    var btn=document.createElement('button'); btn.type='button'; btn.className='zbtn'; btn.innerHTML='<span aria-hidden="true">⤢</span> Agrandir';
+    btn.setAttribute('aria-label','Agrandir la figure'); p.parentNode.insertBefore(btn,p.nextSibling);   // sous le cadre : ne recouvre jamais le dessin
+    btn.addEventListener('click',function(){open(img);}); img.addEventListener('click',function(){open(img);});
+  });
+  dlg.querySelector('.zoom-g').addEventListener('click',function(e){var z=e.target.closest('button'); if(!z) return;
+    var d=+z.dataset.z; if(d===0) setFit(); else {k=Math.max(0.5,Math.min(10,k*(d>0?1.4:1/1.4))); size();}});
+  bx.addEventListener('click',close);
+  sc.addEventListener('click',function(e){if(e.target===sc) close();});
+  document.addEventListener('keydown',function(e){ if(dlg.hidden) return;
+    if(e.key==='Escape'){e.preventDefault(); close();}
+    else if(e.key==='+'||e.key==='='){k=Math.min(10,k*1.4); size();} else if(e.key==='-'){k=Math.max(0.5,k/1.4); size();}
+    else if(e.key==='Tab'){var f=[].slice.call(dlg.querySelectorAll('button,a[href]')); var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault(); f[f.length-1].focus();} else if(!e.shiftKey&&i===f.length-1){e.preventDefault(); f[0].focus();}}});
+  window.addEventListener('resize',function(){ if(!dlg.hidden&&Math.abs(k-fit)<1e-6) setFit(); });
+})();
+</script><script>
+(function(){
+  function fit(){[].forEach.call(document.querySelectorAll('.course span.math.inline'),function(s){
+    s.classList.remove('long'); var c=s.closest('p,li,td,div'); if(!c) return;
+    if(s.getBoundingClientRect().width>c.getBoundingClientRect().width) s.classList.add('long');});}
+  fit(); window.addEventListener('load',fit); window.addEventListener('resize',fit);
+})();
+</script>
+<svg style="display: none;" id="MJX-SVG-global-cache"><defs><path id="MJX-TEX-I-1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path><path id="MJX-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-TEX-I-1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path><path id="MJX-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-TEX-I-1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></defs></svg><script data-goatcounter="https://bcha-courses.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
