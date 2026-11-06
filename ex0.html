@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercices · Chapitre 0 · Électronique Analogique 1</title>
+<meta name="description" content=""><meta name="author" content="Dr Bassem CHAABANE">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/ea1.css">
+</head><body class="has-side">
+<div class="readbar" id="readbar"></div>
+<header class="top"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect class="bp" x="2" y="2" width="28" height="28" rx="6"/><path class="w" d="M4 16h7M21 16h7"/><path class="d" d="M11 9.5v13l10-6.5z"/><path class="w" d="M21 9.5v13"/></svg></span><span class="brand-txt"><span class="brand-k">ENISO 2026/2027 · Dr Bassem CHAABANE</span><span class="brand-t">Électronique Analogique 1</span></span></a>
+<button class="menu" aria-label="Ouvrir le navigateur" id="menu"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg><span>Navigateur</span></button><div class="crumb" aria-label="Vous êtes ici"><span class="crumb-k">Chapitre 0</span><span class="crumb-sep">·</span><span class="crumb-t">L&#x27;ingénierie d&#x27;abord · Exercices</span></div><nav class="nav" aria-label="Menu principal"><a href="index.html">Accueil</a><a href="sommaire.html">Sommaire</a><a href="ch0.html">Cours</a><a href="exercices.html" class="on" aria-current="page">Exercices</a><a href="interactifs.html">Interactifs</a></nav></header>
+<div class="wrap with-side"><aside class="side" id="side" aria-label="Navigateur"><div class="side-in"><button class="side-close" aria-label="Fermer le navigateur">×</button><div class="side-cur"><div class="side-k"><span>EXERCICES · CHAPITRE 0</span><span id="progtxt"></span></div><div class="side-prog"><span id="prog"></span></div><div class="side-btns"><a class="sb wide" href="ch0.html"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg> Cours, chapitre 0</a></div></div><label class="filter"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="filter" type="search" placeholder="Chercher un exercice…" autocomplete="off" aria-label="Chercher un exercice"></label><div class="side-h">Séries d’exercices</div><ol class="chaps"><li class="nc on"><details open><summary><a class="nc-a" href="ex0.html"><span class="badge">0</span><span class="nc-t">L&#x27;ingénierie d&#x27;abord</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li class="te"><a href="#cours-0"><span class="sn"></span><span class="st">Exercices d’application du cours</span></a></li><li><a href="#ex-C0-1"><span class="sn">C0.1</span><span class="st">Quel rôle ?</span></a></li><li><a href="#ex-C0-2"><span class="sn">C0.2</span><span class="st">Le monde est analogique</span></a></li><li><a href="#ex-C0-3"><span class="sn">C0.3</span><span class="st">Analyse ou conception ?</span></a></li><li><a href="#ex-C0-4"><span class="sn">C0.4</span><span class="st">La chaîne de raisonnement</span></a></li><li><a href="#ex-C0-5"><span class="sn">C0.5</span><span class="st">Défi : un composant jamais vu</span></a></li></ol></details></li><li class="nc"><details><summary><a class="nc-a" href="ex1.html"><span class="badge">1</span><span class="nc-t">Grandeurs et modèles linéaires</span></a><span class="nc-x" aria-hidden="true"></span></summary></details></li><li class="nc"><details><summary><a class="nc-a" href="ex2.html"><span class="badge">2</span><span class="nc-t">Analyse temporelle</span></a><span class="nc-x" aria-hidden="true"></span></summary></details></li><li class="nc"><details><summary><a class="nc-a" href="ex3.html"><span class="badge">3</span><span class="nc-t">La diode</span></a><span class="nc-x" aria-hidden="true"></span></summary></details></li><li class="nc"><details><summary><a class="nc-a" href="ex4.html"><span class="badge">4</span><span class="nc-t">Le transistor bipolaire</span></a><span class="nc-x" aria-hidden="true"></span></summary></details></li><li class="nc"><details><summary><a class="nc-a" href="ex5.html"><span class="badge">5</span><span class="nc-t">Les trois montages amplificateurs</span></a><span class="nc-x" aria-hidden="true"></span></summary></details></li></ol></div></aside><div class="side-veil" id="veil"></div><main class="main" id="main"><header class="chap-head"><div class="chap-k">EXERCICES · CHAPITRE 0</div><h1>L’ingénierie d’abord</h1><p class="chap-kw">0 exercices de travaux dirigés, chacun avec son corrigé détaillé, et 5 exercices d’application du cours avec leur réponse. Corrigés et réponses sont repliés : cherchez d’abord, puis ouvrez.</p><p class="chap-links"><a class="chip" href="ch0.html"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg> Cours, chapitre 0</a><a class="chip" href="pdf/EA1_TD_Enonces.pdf"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM15 2v5h5"/></svg> Énoncés (PDF)</a><a class="chip" href="pdf/EA1_TD_Corriges.pdf"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM15 2v5h5"/></svg> Corrigés (PDF)</a></p></header><div class="ex-tools"><button class="tbtn" data-act="open">Tout ouvrir</button><button class="tbtn" data-act="close">Tout replier</button></div><article class="course exo">
+<div class="box situ"><p class="t">Ce que ces exercices travaillent</p>
+<p>Cette série accompagne le chapitre 0. Elle ne demande aucun calcul : elle installe la démarche du cours (rôles de l’ingénieur, analyse et conception, chaîne de raisonnement) avant les premiers circuits.</p>
+</div>
+<section id="numchapitre-0-du-coursacours-0exercices-dapplication-du-cours" class="level2 unnumbered">
+<h2 id="cours-0" class="unnumbered"><span class="num">Chapitre 0 du cours</span>Exercices d’application du cours</h2>
+<div class="box grey"><p class="t">À propos de ces exercices</p>
+<p>Ces exercices accompagnaient la fin du chapitre 0 du polycopié ; ils sont rassemblés ici. Leurs réponses sont repliées sous chaque énoncé (recueil des corrigés, même section).</p>
+</div>
+<div class="exo"><section id="numexercice-c0.1aex-c0-1quel-rôle" class="level4 unnumbered">
+<h4 id="ex-C0-1" class="unnumbered"><span class="num">Exercice C0.1</span>Quel rôle ?</h4>
+<p>Pour chaque tâche, dites si elle relève surtout de l’inventeur, du chercheur ou du technicien, et justifiez en une phrase : (a) dépanner une alimentation qui chauffe ; (b) établir un modèle du bruit d’un capteur ; (c) proposer un dispositif qui recharge un téléphone par la marche.</p>
+<details class="ans"><summary>Afficher la réponse</summary><div class="sol-in"><p><em>Question de réflexion : pas de réponse chiffrée ; la réponse se construit avec le cours.</em></p></div></details>
+</section></div>
+<div class="exo"><section id="numexercice-c0.2aex-c0-2le-monde-est-analogique" class="level4 unnumbered">
+<h4 id="ex-C0-2" class="unnumbered"><span class="num">Exercice C0.2</span>Le monde est analogique</h4>
+<p>Choisissez un objet numérique de la vie courante (montre connectée, souris, téléphone). Listez au moins trois fonctions analogiques situées entre le monde physique et son processeur, sur le modèle de la figure 0.1.</p>
+<details class="ans"><summary>Afficher la réponse</summary><div class="sol-in"><p><em>Question de réflexion : pas de réponse chiffrée ; la réponse se construit avec le cours.</em></p></div></details>
+</section></div>
+<div class="exo"><section id="numexercice-c0.3aex-c0-3analyse-ou-conception" class="level4 unnumbered">
+<h4 id="ex-C0-3" class="unnumbered"><span class="num">Exercice C0.3</span>Analyse ou conception ?</h4>
+<p>« Calculer la tension de sortie d’un diviseur donné » et « choisir deux résistances pour obtenir 3,3 V à partir de 5 V ». Laquelle de ces deux tâches est une analyse, laquelle une conception ? Pourquoi la seconde a-t-elle plusieurs bonnes réponses ?</p>
+<details class="ans"><summary>Afficher la réponse</summary><div class="sol-in"><p><em>Question de réflexion : pas de réponse chiffrée ; la réponse se construit avec le cours.</em></p></div></details>
+</section></div>
+<div class="exo"><section id="numexercice-c0.4aex-c0-4la-chaîne-de-raisonnement" class="level4 unnumbered">
+<h4 id="ex-C0-4" class="unnumbered"><span class="num">Exercice C0.4</span>La chaîne de raisonnement</h4>
+<p>On vous demande la consommation d’une LED alimentée par une pile de 9 V à travers une résistance de 470 Ω (figure C0.a). Avant tout calcul, écrivez ce que vous décidez à chacune des sept étapes de la figure 0.2.</p>
+<figure class="td"><div class="subs">
+<div class="sch"><div class="paper"><img src="img/cours-fig-exo-led-pile.svg" width="176" height="116" alt="Figure C0.a. LED alimentée par une pile de 9 V à travers une résistance de 470 Ω." loading="lazy"></div></div>
+</div><figcaption id="fig-C0-a"><b>Figure C0.a.</b> LED alimentée par une pile de 9 V à travers une résistance de 470 Ω.
+</figcaption></figure>
+<details class="ans"><summary>Afficher la réponse</summary><div class="sol-in"><p><em>Question de réflexion : pas de réponse chiffrée ; la réponse se construit avec le cours.</em></p></div></details>
+</section></div>
+<div class="exo"><section id="numexercice-c0.5aex-c0-5défi-un-composant-jamais-vu" class="level4 unnumbered">
+<h4 id="ex-C0-5" class="unnumbered"><span class="num">Exercice C0.5</span>Défi : un composant jamais vu</h4>
+<p>Une fiche technique décrit un « limiteur de courant à deux bornes » que vous ne connaissez pas. En suivant la démarche de la section 0.2, rédigez les questions que vous vous posez, dans l’ordre, et dites où vous chercherez chaque réponse et comment vous vérifierez que vous l’avez comprise.</p>
+<details class="ans"><summary>Afficher la réponse</summary><div class="sol-in"><p><em>Question de réflexion : pas de réponse chiffrée ; la réponse se construit avec le cours.</em></p></div></details>
+</section></div>
+</section>
+
+</article><nav class="pn" aria-label="Page précédente et suivante"><a class="prev" href="exercices.html"><small>← Série précédente</small>Avant de commencer</a><a class="next" href="ex1.html"><small>Série suivante →</small>Chapitre 1 · Grandeurs et modèles linéaires</a></nav></main></div>
+<footer class="foot"><span>ENISO 2026/2027</span><span>Dr Bassem CHAABANE</span><span>Électronique Analogique 1</span></footer>
+<div class="foot-more" lang="fr">
+<p>© 2026 Bacem Chaabane · Contenu pédagogique sous licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Les documents de tiers cités (notes d’application, ouvrages, cours) restent la propriété de leurs auteurs et éditeurs.</p>
+<p>Remarques à l’auteur : <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Question%20%E2%80%93%20Exercices%20%C2%B7%20Chapitre%200&amp;body=Page%20%3A%20Exercices%20%C2%B7%20Chapitre%200%0D%0ASection%2C%20%C3%A9quation%2C%20figure%20ou%20exercice%20%3A%0D%0A%0D%0AMa%20question%20%3A%0D%0A%0D%0A">Question</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Suggestion%20%E2%80%93%20Exercices%20%C2%B7%20Chapitre%200&amp;body=Page%20%3A%20Exercices%20%C2%B7%20Chapitre%200%0D%0ASection%20concern%C3%A9e%20%3A%0D%0A%0D%0AMa%20suggestion%20%3A%0D%0A%0D%0A">Suggestion</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Signalement%20d%E2%80%99erreur%20%E2%80%93%20Exercices%20%C2%B7%20Chapitre%200&amp;body=Page%20%3A%20Exercices%20%C2%B7%20Chapitre%200%0D%0ASection%2C%20%C3%A9quation%2C%20figure%20ou%20exercice%20%3A%0D%0A%0D%0ADescription%20de%20l%E2%80%99erreur%20%3A%0D%0A%0D%0ACorrection%20propos%C3%A9e%20%28facultatif%29%20%3A%0D%0A%0D%0A">Signaler une erreur</a></p>
+</div>
+<script src="assets/site.js"></script><script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('figure .paper img'));
+  if(!imgs.length) return;
+  var dlg=document.createElement('div'); dlg.className='zoom'; dlg.hidden=true;
+  dlg.setAttribute('role','dialog'); dlg.setAttribute('aria-modal','true'); dlg.setAttribute('aria-label','Figure agrandie');
+  dlg.innerHTML='<div class="zoom-bar"><b class="zoom-t"></b><span class="zoom-g">'
+    +'<button type="button" data-z="-1" aria-label="Réduire">−</button><button type="button" data-z="0">Ajuster</button>'
+    +'<button type="button" data-z="1" aria-label="Agrandir">+</button></span>'
+    +'<a class="zoom-o" target="_blank" rel="noopener">Ouvrir l’image seule</a>'
+    +'<button type="button" class="zoom-x" aria-label="Fermer">✕</button></div>'
+    +'<div class="zoom-sc"><div class="zoom-pp"><img alt=""></div></div><div class="zoom-c"></div>';
+  document.body.appendChild(dlg);
+  var im=dlg.querySelector('img'), sc=dlg.querySelector('.zoom-sc'), cap=dlg.querySelector('.zoom-c'),
+      ttl=dlg.querySelector('.zoom-t'), op=dlg.querySelector('.zoom-o'), bx=dlg.querySelector('.zoom-x');
+  var w0=1, h0=1, k=1, fit=1, back=null;
+  function size(){ im.style.width=Math.round(w0*k)+'px'; im.style.height=Math.round(h0*k)+'px'; }
+  function setFit(){ var w=sc.clientWidth-56, h=sc.clientHeight-56; fit=Math.max(0.5,Math.min(4,w/w0,h/h0)); k=fit; size(); }
+  function open(img){
+    back=document.activeElement;
+    w0=+img.getAttribute('width')||img.naturalWidth||400; h0=+img.getAttribute('height')||img.naturalHeight||300;
+    im.src=img.currentSrc||img.src; im.alt=img.alt; op.href=im.src;
+    var fig=img.closest('figure'), fc=fig&&fig.querySelector('figcaption'), sub=img.closest('.sch');
+    var sl=sub&&sub.querySelector('.sl');
+    cap.innerHTML=(sl?sl.innerHTML+' ':'')+(fc?fc.innerHTML:'');
+    var b=fc&&fc.querySelector('b'); ttl.textContent=b?b.textContent.replace(/[.\s]+$/,''):'Figure';
+    dlg.hidden=false; document.body.classList.add('zoomed'); setFit(); sc.scrollTop=0; sc.scrollLeft=0; bx.focus();
+  }
+  function close(){ dlg.hidden=true; document.body.classList.remove('zoomed'); im.removeAttribute('src'); if(back&&back.focus) back.focus(); }
+  imgs.forEach(function(img){
+    var p=img.closest('.paper'); p.classList.add('zoomable');
+    var btn=document.createElement('button'); btn.type='button'; btn.className='zbtn'; btn.innerHTML='<span aria-hidden="true">⤢</span> Agrandir';
+    btn.setAttribute('aria-label','Agrandir la figure'); p.parentNode.insertBefore(btn,p.nextSibling);   // sous le cadre : ne recouvre jamais le dessin
+    btn.addEventListener('click',function(){open(img);}); img.addEventListener('click',function(){open(img);});
+  });
+  dlg.querySelector('.zoom-g').addEventListener('click',function(e){var z=e.target.closest('button'); if(!z) return;
+    var d=+z.dataset.z; if(d===0) setFit(); else {k=Math.max(0.5,Math.min(10,k*(d>0?1.4:1/1.4))); size();}});
+  bx.addEventListener('click',close);
+  sc.addEventListener('click',function(e){if(e.target===sc) close();});
+  document.addEventListener('keydown',function(e){ if(dlg.hidden) return;
+    if(e.key==='Escape'){e.preventDefault(); close();}
+    else if(e.key==='+'||e.key==='='){k=Math.min(10,k*1.4); size();} else if(e.key==='-'){k=Math.max(0.5,k/1.4); size();}
+    else if(e.key==='Tab'){var f=[].slice.call(dlg.querySelectorAll('button,a[href]')); var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault(); f[f.length-1].focus();} else if(!e.shiftKey&&i===f.length-1){e.preventDefault(); f[0].focus();}}});
+  window.addEventListener('resize',function(){ if(!dlg.hidden&&Math.abs(k-fit)<1e-6) setFit(); });
+})();
+</script><script>
+(function(){
+  function fit(){[].forEach.call(document.querySelectorAll('.course span.math.inline'),function(s){
+    s.classList.remove('long'); var c=s.closest('p,li,td,div'); if(!c) return;
+    if(s.getBoundingClientRect().width>c.getBoundingClientRect().width) s.classList.add('long');});}
+  fit(); window.addEventListener('load',fit); window.addEventListener('resize',fit);
+})();
+</script>
+<script data-goatcounter="https://bcha-courses.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>

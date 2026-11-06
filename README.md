@@ -13,7 +13,7 @@ Site web d'un cours ouvert d'électronique analogique pour élèves ingénieurs 
 - **Annexes A à C** : Amplificateurs opérationnels et raisonnement dynamique · Énergie et puissance dans les circuits électroniques · Redressement de précision.
 - **Travaux dirigés** : une série d'énoncés par chapitre, et les corrigés détaillés.
 - **Explorateurs interactifs** : la diode instant par instant, le point de repos du pont diviseur, l'excursion du signal et la distorsion, entre autres.
-- **Téléchargements** : le polycopié complet, les énoncés et les corrigés des travaux dirigés (PDF).
+- **Téléchargements** : le polycopié complet, les énoncés et les corrigés des travaux dirigés (PDF), ainsi que leurs sources XeLaTeX.
 - **Bibliographie** commune.
 
 Le site est entièrement statique (HTML, CSS et un peu de JavaScript, sans bibliothèque externe). Il ne demande ni serveur, ni compte, ni connexion une fois téléchargé. Les visites sont comptées avec [GoatCounter](https://www.goatcounter.com), un service de statistiques respectueux de la vie privée, sans cookies ni données personnelles ; le site fonctionne entièrement sans lui.
