@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le point Q du transistor · Électronique Analogique 1</title>
+<meta name="description" content=""><meta name="author" content="Dr Bassem CHAABANE">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/ea1.css">
+</head><body class="has-side ixpage">
+<div class="readbar" id="readbar"></div>
+<header class="top"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect class="bp" x="2" y="2" width="28" height="28" rx="6"/><path class="w" d="M4 16h7M21 16h7"/><path class="d" d="M11 9.5v13l10-6.5z"/><path class="w" d="M21 9.5v13"/></svg></span><span class="brand-txt"><span class="brand-k">ENISO 2026/2027 · Dr Bassem CHAABANE</span><span class="brand-t">Électronique Analogique 1</span></span></a>
+<button class="menu" aria-label="Ouvrir le navigateur" id="menu"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg><span>Navigateur</span></button><div class="crumb" aria-label="Vous êtes ici"><span class="crumb-k">Interactifs</span><span class="crumb-sep">·</span><span class="crumb-t">Le point Q du transistor</span></div><nav class="nav" aria-label="Menu principal"><a href="index.html">Accueil</a><a href="sommaire.html">Sommaire</a><a href="ch0.html">Cours</a><a href="exercices.html">Exercices</a><a href="interactifs.html" class="on" aria-current="page">Interactifs</a></nav></header>
+<div class="wrap with-side"><aside class="side" id="side" aria-label="Navigateur"><div class="side-in"><button class="side-close" aria-label="Fermer le navigateur">×</button><div class="side-cur"><div class="side-k"><span>DANS LE COURS</span></div><div class="side-btns"><a class="sb wide" href="ch4.html#try-bjt-q"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg> Chapitre 4, section 4.3</a></div></div><div class="side-h">Interactifs</div><ol class="chaps"><li class="nc"><a class="nc-a solo" href="ix-linearisation.html"><span class="badge">1</span><span class="nc-t">Linéariser autour de Q</span></a></li><li class="nc"><a class="nc-a solo" href="ix-rc-bode.html"><span class="badge">2</span><span class="nc-t">RC : signal carré et Bode</span></a></li><li class="nc"><a class="nc-a solo" href="ix-diode-modeles.html"><span class="badge">3</span><span class="nc-t">Les modèles de la diode</span></a></li><li class="nc on"><a class="nc-a solo" href="ix-bjt-q.html"><span class="badge">4</span><span class="nc-t">Le point Q du transistor</span></a></li></ol><div class="side-h">Explorateurs dans les chapitres</div><ol class="chaps"><li class="nc"><a class="nc-a solo" href="ch1.html#explorer"><span class="badge">1</span><span class="nc-t">Déplacez le point Q</span></a></li><li class="nc"><a class="nc-a solo" href="ch2.html#explorer"><span class="badge">2</span><span class="nc-t">Le RC face au signal carré</span></a></li><li class="nc"><a class="nc-a solo" href="ch2.html#explorer2"><span class="badge">2</span><span class="nc-t">La période selon k</span></a></li><li class="nc"><a class="nc-a solo" href="ch3.html#explorer"><span class="badge">3</span><span class="nc-t">Redressement et condensateur de filtrage</span></a></li><li class="nc"><a class="nc-a solo" href="ch3.html#xc"><span class="badge">3</span><span class="nc-t">La diode instant par instant</span></a></li><li class="nc"><a class="nc-a solo" href="ch4.html#xa"><span class="badge">4</span><span class="nc-t">Le point Q du pont diviseur et ses marges</span></a></li><li class="nc"><a class="nc-a solo" href="ch5.html#explorer"><span class="badge">5</span><span class="nc-t">Les trois montages entre une source et une charge</span></a></li><li class="nc"><a class="nc-a solo" href="ch5.html#xb"><span class="badge">5</span><span class="nc-t">Excursion du signal, distorsion et écrêtage</span></a></li></ol></div></aside><div class="side-veil" id="veil"></div><main class="main" id="main"><header class="chap-head"><div class="chap-k">INTERACTIF · CHAPITRE 4</div><h1>Montage générique : du blocage à la saturation</h1><p class="chap-kw">Le montage de la figure 4.7 (<i>V</i><sub>CC</sub> = 10 V, <i>R</i><sub>C</sub> = 1,25 kΩ, <i>R</i><sub>B</sub> = 50 kΩ, β = 100, <i>V</i><sub>A</sub> = 100 V), calculé avec les équations d’Ebers et Moll. La droite d’entrée choisit <i>I</i><sub>B</sub>, la courbe de sortie correspondante croise la droite de charge en Q.</p><p class="chap-links"><a class="chip" href="ch4.html#try-bjt-q"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg> Chapitre 4, section 4.3</a></p></header><section class="tryit full"><div class="ix" data-ix="bjt-q"><noscript>Cet interactif a besoin de JavaScript.</noscript></div><div class="tryit-tries"><span>À observer</span><ul><li>Les points A à E du tableau 4.3 : <i>V</i><sub>BB</sub> = 0,5 / 2 / 3 / 4 / 5 V.</li><li>De B à D, <i>V</i><sub>BE</sub> ne bouge que de 24 mV : c’est <i>R</i><sub>B</sub> qui convertit <i>V</i><sub>BB</sub> en courant de base.</li><li>Dans la zone active, la pente de la courbe de transfert vaut ≈ −βR_C/<i>R</i><sub>B</sub> = −2,5.</li></ul></div></section><nav class="pn" aria-label="Page précédente et suivante"><a class="prev" href="ix-diode-modeles.html"><small>← Précédent</small>Les modèles de la diode</a><span></span></nav></main></div>
+<footer class="foot"><span>ENISO 2026/2027</span><span>Dr Bassem CHAABANE</span><span>Électronique Analogique 1</span></footer>
+<div class="foot-more" lang="fr">
+<p>© 2026 Bacem Chaabane · Contenu pédagogique sous licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Les documents de tiers cités (notes d’application, ouvrages, cours) restent la propriété de leurs auteurs et éditeurs.</p>
+<p>Remarques à l’auteur : <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Question%20%E2%80%93%20Le%20point%20Q%20du%20transistor&amp;body=Page%20%3A%20Le%20point%20Q%20du%20transistor%0D%0ASection%2C%20%C3%A9quation%2C%20figure%20ou%20exercice%20%3A%0D%0A%0D%0AMa%20question%20%3A%0D%0A%0D%0A">Question</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Suggestion%20%E2%80%93%20Le%20point%20Q%20du%20transistor&amp;body=Page%20%3A%20Le%20point%20Q%20du%20transistor%0D%0ASection%20concern%C3%A9e%20%3A%0D%0A%0D%0AMa%20suggestion%20%3A%0D%0A%0D%0A">Suggestion</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5B%C3%89lectronique%20Analogique%201%5D%20Signalement%20d%E2%80%99erreur%20%E2%80%93%20Le%20point%20Q%20du%20transistor&amp;body=Page%20%3A%20Le%20point%20Q%20du%20transistor%0D%0ASection%2C%20%C3%A9quation%2C%20figure%20ou%20exercice%20%3A%0D%0A%0D%0ADescription%20de%20l%E2%80%99erreur%20%3A%0D%0A%0D%0ACorrection%20propos%C3%A9e%20%28facultatif%29%20%3A%0D%0A%0D%0A">Signaler une erreur</a></p>
+</div>
+<script src="assets/site.js"></script><script src="assets/ix/kit.js"></script><script src="assets/ix/bjt-q.js"></script><script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('figure .paper img'));
+  if(!imgs.length) return;
+  var dlg=document.createElement('div'); dlg.className='zoom'; dlg.hidden=true;
+  dlg.setAttribute('role','dialog'); dlg.setAttribute('aria-modal','true'); dlg.setAttribute('aria-label','Figure agrandie');
+  dlg.innerHTML='<div class="zoom-bar"><b class="zoom-t"></b><span class="zoom-g">'
+    +'<button type="button" data-z="-1" aria-label="Réduire">−</button><button type="button" data-z="0">Ajuster</button>'
+    +'<button type="button" data-z="1" aria-label="Agrandir">+</button></span>'
+    +'<a class="zoom-o" target="_blank" rel="noopener">Ouvrir l’image seule</a>'
+    +'<button type="button" class="zoom-x" aria-label="Fermer">✕</button></div>'
+    +'<div class="zoom-sc"><div class="zoom-pp"><img alt=""></div></div><div class="zoom-c"></div>';
+  document.body.appendChild(dlg);
+  var im=dlg.querySelector('img'), sc=dlg.querySelector('.zoom-sc'), cap=dlg.querySelector('.zoom-c'),
+      ttl=dlg.querySelector('.zoom-t'), op=dlg.querySelector('.zoom-o'), bx=dlg.querySelector('.zoom-x');
+  var w0=1, h0=1, k=1, fit=1, back=null;
+  function size(){ im.style.width=Math.round(w0*k)+'px'; im.style.height=Math.round(h0*k)+'px'; }
+  function setFit(){ var w=sc.clientWidth-56, h=sc.clientHeight-56; fit=Math.max(0.5,Math.min(4,w/w0,h/h0)); k=fit; size(); }
+  function open(img){
+    back=document.activeElement;
+    w0=+img.getAttribute('width')||img.naturalWidth||400; h0=+img.getAttribute('height')||img.naturalHeight||300;
+    im.src=img.currentSrc||img.src; im.alt=img.alt; op.href=im.src;
+    var fig=img.closest('figure'), fc=fig&&fig.querySelector('figcaption'), sub=img.closest('.sch');
+    var sl=sub&&sub.querySelector('.sl');
+    cap.innerHTML=(sl?sl.innerHTML+' ':'')+(fc?fc.innerHTML:'');
+    var b=fc&&fc.querySelector('b'); ttl.textContent=b?b.textContent.replace(/[.\s]+$/,''):'Figure';
+    dlg.hidden=false; document.body.classList.add('zoomed'); setFit(); sc.scrollTop=0; sc.scrollLeft=0; bx.focus();
+  }
+  function close(){ dlg.hidden=true; document.body.classList.remove('zoomed'); im.removeAttribute('src'); if(back&&back.focus) back.focus(); }
+  imgs.forEach(function(img){
+    var p=img.closest('.paper'); p.classList.add('zoomable');
+    var btn=document.createElement('button'); btn.type='button'; btn.className='zbtn'; btn.innerHTML='<span aria-hidden="true">⤢</span> Agrandir';
+    btn.setAttribute('aria-label','Agrandir la figure'); p.parentNode.insertBefore(btn,p.nextSibling);   // sous le cadre : ne recouvre jamais le dessin
+    btn.addEventListener('click',function(){open(img);}); img.addEventListener('click',function(){open(img);});
+  });
+  dlg.querySelector('.zoom-g').addEventListener('click',function(e){var z=e.target.closest('button'); if(!z) return;
+    var d=+z.dataset.z; if(d===0) setFit(); else {k=Math.max(0.5,Math.min(10,k*(d>0?1.4:1/1.4))); size();}});
+  bx.addEventListener('click',close);
+  sc.addEventListener('click',function(e){if(e.target===sc) close();});
+  document.addEventListener('keydown',function(e){ if(dlg.hidden) return;
+    if(e.key==='Escape'){e.preventDefault(); close();}
+    else if(e.key==='+'||e.key==='='){k=Math.min(10,k*1.4); size();} else if(e.key==='-'){k=Math.max(0.5,k/1.4); size();}
+    else if(e.key==='Tab'){var f=[].slice.call(dlg.querySelectorAll('button,a[href]')); var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault(); f[f.length-1].focus();} else if(!e.shiftKey&&i===f.length-1){e.preventDefault(); f[0].focus();}}});
+  window.addEventListener('resize',function(){ if(!dlg.hidden&&Math.abs(k-fit)<1e-6) setFit(); });
+})();
+</script><script>
+(function(){
+  function fit(){[].forEach.call(document.querySelectorAll('.course span.math.inline'),function(s){
+    s.classList.remove('long'); var c=s.closest('p,li,td,div'); if(!c) return;
+    if(s.getBoundingClientRect().width>c.getBoundingClientRect().width) s.classList.add('long');});}
+  fit(); window.addEventListener('load',fit); window.addEventListener('resize',fit);
+})();
+</script>
+<script data-goatcounter="https://bcha-courses.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>
