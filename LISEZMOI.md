@@ -8,7 +8,7 @@ Si le navigateur bloque les fichiers locaux, lancez un petit serveur **depuis ce
 ## Barre supérieure
 Accueil · Sommaire · Cours · Exercices · Interactifs.
 
-- **Accueil** : couverture, présentation, cartes des chapitres, interactifs, téléchargements (polycopié, énoncés, corrigés, note SBOA068, en lien vers le site de Texas Instruments, et les trois sources XeLaTeX).
+- **Accueil** : couverture, présentation, cartes des chapitres, interactifs, téléchargements (polycopié, énoncés, corrigés, note SBOA068, en lien vers le site de Texas Instruments).
 - **Sommaire** : chaque chapitre et chaque section, avec les numéros du PDF.
 - **Cours** : chapitres 0 à 5 et annexes A à C (hors des 21 heures), générés depuis la source XeLaTeX du polycopié. Même texte, mêmes encadrés, figures, tableaux et numéros d’équations et de figures que le PDF.
 - **Exercices** : une série par chapitre (0 à 5). Chaque exercice de travaux dirigés est suivi de son corrigé détaillé, replié ; les exercices d’application du cours (déplacés du polycopié dans le recueil de TD) suivent, avec leur réponse repliée. Boutons « Tout ouvrir » et « Tout replier ».
