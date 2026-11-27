@@ -162,3 +162,11 @@ body.zoomed{overflow:hidden}
 .foot-more .fb-msg{max-width:760px;margin:2px 0 8px;font-size:13px;line-height:1.6;color:#3f4a57}
 @media (max-width:720px){.foot-more{margin-top:-10px;padding:0 16px 20px;text-align:center}.foot-more .fb-msg{margin-left:auto;margin-right:auto}}
 @media print{.foot-more{display:none}}
+
+/* Bouton de langue FR | EN (barre supérieure) */
+.top .lang{margin-left:auto;display:flex;align-items:center;gap:2px;flex:none;font:600 13px/1 var(--sans);letter-spacing:.04em;border:1px solid rgba(255,255,255,.35);border-radius:7px;padding:2px}
+.top .lang+.nav{margin-left:0}
+.top .lang>span,.top .lang>a{display:block;padding:6px 8px;border-radius:5px;color:#dbe8eb;text-decoration:none}
+.top .lang .lang-on{background:rgba(255,255,255,.18);color:#fff}
+.top .lang a:hover,.top .lang a:focus-visible{background:rgba(255,255,255,.12);color:#fff}
+@media (max-width:760px){.top .brand{min-width:0;flex:1 1 0}.top .brand-txt{min-width:0}.top .brand-t{white-space:normal;line-height:1.2}.top .lang>span,.top .lang>a{padding:5px 6px}}

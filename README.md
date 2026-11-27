@@ -2,7 +2,7 @@
 
 Site web d'un cours ouvert d'électronique analogique pour élèves ingénieurs : des grandeurs électriques aux montages amplificateurs à transistor bipolaire.
 
-*An open French-language course website on analog electronics for engineering students. Licensed under CC BY 4.0.*
+*An open course website on analog electronics for engineering students, in French and in English (English edition « Analog Electronics 1 » in [`en/`](https://bcha1976.github.io/Electronique-Analogique1/en/)). Licensed under CC BY 4.0.*
 
 **Auteur :** Bacem Chaabane, Département d'Électronique Industrielle, ENISO (École Nationale d'Ingénieurs de Sousse), 2026/2027
 **Licence :** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.fr)
@@ -15,6 +15,7 @@ Site web d'un cours ouvert d'électronique analogique pour élèves ingénieurs 
 - **Explorateurs interactifs** : la diode instant par instant, le point de repos du pont diviseur, l'excursion du signal et la distorsion, entre autres.
 - **Téléchargements** : le polycopié complet, les énoncés et les corrigés des travaux dirigés (PDF).
 - **Bibliographie** commune.
+- **Édition anglaise** (*Analog Electronics 1*) : le même site en anglais dans le dossier `en/`, avec ses PDF ; un bouton FR | EN sur chaque page mène à la même page dans l'autre langue.
 
 Le site est entièrement statique (HTML, CSS et un peu de JavaScript, sans bibliothèque externe). Il ne demande ni serveur, ni compte, ni connexion une fois téléchargé. Les visites sont comptées avec [GoatCounter](https://www.goatcounter.com), un service de statistiques respectueux de la vie privée, sans cookies ni données personnelles ; le site fonctionne entièrement sans lui.
 

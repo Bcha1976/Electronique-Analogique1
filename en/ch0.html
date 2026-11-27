@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 0 · Engineering first · Analog Electronics 1</title>
+<meta name="description" content="The profession, the gap between courses and practice, and the approach this course takes"><meta name="author" content="Dr Bassem CHAABANE">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/ea1.css">
+<link rel="alternate" hreflang="fr" href="../ch0.html"><link rel="alternate" hreflang="en" href="ch0.html"><style id="MJX-SVG-styles">
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></head><body class="has-side">
+<div class="readbar" id="readbar"></div>
+<header class="top"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect class="bp" x="2" y="2" width="28" height="28" rx="6"></rect><path class="w" d="M4 16h7M21 16h7"></path><path class="d" d="M11 9.5v13l10-6.5z"></path><path class="w" d="M21 9.5v13"></path></svg></span><span class="brand-txt"><span class="brand-k">ENISO 2026/2027 · Version 2 · Dr Bassem CHAABANE</span><span class="brand-t">Analog Electronics 1</span></span></a>
+<button class="menu" aria-label="Open the navigator" id="menu"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"></path></svg><span>Navigator</span></button><div class="crumb" aria-label="You are here"><span class="crumb-k">Chapter 0</span><span class="crumb-sep">·</span><span class="crumb-t">Engineering first</span></div><div class="lang" role="group" aria-label="Langue / Language"><span class="lang-on" aria-current="true">EN</span><a class="lang-alt" href="../ch0.html" hreflang="fr" lang="fr" title="Version française de cette page">FR</a></div><nav class="nav" aria-label="Main menu"><a href="index.html">Home</a><a href="sommaire.html">Contents</a><a href="ch0.html" class="on" aria-current="page">Course</a><a href="exercices.html">Exercises</a><a href="interactifs.html">Interactives</a></nav></header>
+<div class="wrap with-side"><aside class="side" id="side" aria-label="Navigator"><div class="side-in"><button class="side-close" aria-label="Close the navigator">×</button><div class="side-cur"><div class="side-k"><span>CHAPTER 0</span><span id="progtxt"></span></div><div class="side-prog"><span id="prog"></span></div><div class="side-btns"><span class="sb off"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></span><a class="sb wide" href="ex0.html"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3 21l3.8-1 11-11-2.8-2.8-11 11zM14 6.2l2.8 2.8"></path></svg> Exercises</a><a class="sb" href="ch1.html" title="Next: Quantities and linear models" aria-label="Next chapter"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a></div></div><label class="filter"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input id="filter" type="search" placeholder="Search a section…" autocomplete="off" aria-label="Search a section"></label><div class="side-h">Course</div><ol class="chaps"><li class="nc on"><details open=""><summary><a href="ch0.html" class="nc-a"><span class="badge">0</span><span class="nc-t">Engineering first</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="#c0-sec-metier"><span class="sn">0.1</span><span class="st">The engineer’s profession</span></a></li><li><a href="#c0-sec-ecart"><span class="sn">0.2</span><span class="st">The gap between courses and practice</span></a></li><li><a href="#sec-0-3"><span class="sn">0.3</span><span class="st">Why analog still matters</span></a></li><li><a href="#c0-sec-faces"><span class="sn">0.4</span><span class="st">The two faces of the profession: analysis and design</span></a></li><li><a href="#c0-sec-chaine"><span class="sn">0.5</span><span class="st">The rule of the course: the chain of reasoning</span></a></li><li><a href="#sec-0-6"><span class="sn">0.6</span><span class="st">Why analog electronics is good training ground</span></a></li><li><a href="#c0-sec-programme"><span class="sn">0.7</span><span class="st">The rest of the programme (21 hours)</span></a></li><li><a href="#sec-0-8"><span class="sn">0.8</span><span class="st">Summary</span></a></li><li><a href="#sec-0-9"><span class="sn">0.9</span><span class="st">Exercises</span></a></li></ol></details></li><li class="nc"><details><summary><a href="ch1.html" class="nc-a"><span class="badge">1</span><span class="nc-t">Quantities and linear models</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="ch1.html#sec-1-1"><span class="sn">1.1</span><span class="st">The fundamental quantities</span></a></li><li><a href="ch1.html#sec-1-2"><span class="sn">1.2</span><span class="st">Component relations, then Kirchhoff’s laws</span></a></li><li><a href="ch1.html#c1-sec-resistif"><span class="sn">1.3</span><span class="st">First application of the laws: a resistive circuit</span></a></li><li><a href="ch1.html#c1-sec-transcendance"><span class="sn">1.4</span><span class="st">Transcendence: the need for linear models</span></a></li><li><a href="ch1.html#sec-1-5"><span class="sn">1.5</span><span class="st">Usual linear models and operating point</span></a></li><li><a href="ch1.html#c1-sec-outils"><span class="sn">1.6</span><span class="st">The linear tools: superposition, Thévenin, Norton</span></a></li><li><a href="ch1.html#c1-sec-grand-signal"><span class="sn">1.7</span><span class="st">Linearising in large signal: the piecewise model</span></a></li><li><a href="ch1.html#c1-sec-petit-signal"><span class="sn">1.8</span><span class="st">The need for small signal</span></a></li><li><a href="ch1.html#c1-sec-linearisation"><span class="sn">1.9</span><span class="st">The linearisation procedure</span></a></li><li><a href="ch1.html#c1-sec-quadripole"><span class="sn">1.10</span><span class="st">One last abstraction: the two-port network</span></a></li><li><a href="ch1.html#sec-1-11"><span class="sn">1.11</span><span class="st">Summary</span></a></li><li><a href="ch1.html#sec-1-12"><span class="sn">1.12</span><span class="st">Exercises</span></a></li></ol></details></li><li class="nc"><details><summary><a href="ch2.html" class="nc-a"><span class="badge">2</span><span class="nc-t">Time-domain analysis</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="ch2.html#c2-sec-signaux"><span class="sn">2.1</span><span class="st">Signals that vary in time</span></a></li><li><a href="ch2.html#c2-sec-question"><span class="sn">2.2</span><span class="st">An engineer’s question: the RC circuit and the square wave</span></a></li><li><a href="ch2.html#c2-sec-methodes12"><span class="sn">2.3</span><span class="st">Methods 1 and 2: measure, then write the equation</span></a></li><li><a href="ch2.html#c2-sec-euler"><span class="sn">2.4</span><span class="st">Method 3: advancing step by step, numerical calculation</span></a></li><li><a href="ch2.html#c2-sec-phaseurs"><span class="sn">2.5</span><span class="st">Method 4: Fourier, sinusoids and phasors</span></a></li><li><a href="ch2.html#c2-sec-laplace"><span class="sn">2.6</span><span class="st">Time, frequency, transient, steady state: and the Laplace transform</span></a></li><li><a href="ch2.html#c2-sec-panorama"><span class="sn">2.7</span><span class="st">Which method to choose? The overview</span></a></li><li><a href="ch2.html#c2-sec-oscillateur"><span class="sn">2.8</span><span class="st">When analysis stops being systematic: the relaxation oscillator</span></a></li><li><a href="ch2.html#c2-sec-retroaction"><span class="sn">2.9</span><span class="st">Abstracting through feedback</span></a></li><li><a href="ch2.html#c2-sec-ne555"><span class="sn">2.10</span><span class="st">Challenge: go and look at the NE555</span></a></li><li><a href="ch2.html#c2-sec-feuille"><span class="sn">2.11</span><span class="st">Roadmap: time dependence</span></a></li><li><a href="ch2.html#sec-2-12"><span class="sn">2.12</span><span class="st">Summary</span></a></li><li><a href="ch2.html#sec-2-13"><span class="sn">2.13</span><span class="st">Exercises</span></a></li></ol></details></li><li class="nc"><details><summary><a href="ch3.html" class="nc-a"><span class="badge">3</span><span class="nc-t">The diode</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="ch3.html#c3-sec-panorama"><span class="sn">3.1</span><span class="st">An overview of diodes</span></a></li><li><a href="ch3.html#c3-sec-exponentiel"><span class="sn">3.2</span><span class="st">The exponential model</span></a></li><li><a href="ch3.html#c3-sec-grand-signal"><span class="sn">3.3</span><span class="st">The large-signal models</span></a></li><li><a href="ch3.html#c3-sec-petit-signal"><span class="sn">3.4</span><span class="st">The small-signal model</span></a></li><li><a href="ch3.html#c3-sec-applications"><span class="sn">3.5</span><span class="st">Applications</span></a></li><li><a href="ch3.html#c3-sec-cas1"><span class="sn">3.6</span><span class="st">Case study 1: an LED that transmits music</span></a></li><li><a href="ch3.html#c3-sec-cas2"><span class="sn">3.7</span><span class="st">Case study 2: the Graetz bridge, and beyond the threshold</span></a></li><li><a href="ch3.html#c3-sec-verifiez"><span class="sn">3.8</span><span class="st">Check your understanding</span></a></li><li><a href="ch3.html#c3-sec-sommaire"><span class="sn">3.9</span><span class="st">Summary</span></a></li><li><a href="ch3.html#c3-sec-exercices"><span class="sn">3.10</span><span class="st">Exercises</span></a></li></ol></details></li><li class="nc"><details><summary><a href="ch4.html" class="nc-a"><span class="badge">4</span><span class="nc-t">The bipolar transistor</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="ch4.html#c4-sec-contexte"><span class="sn">4.1</span><span class="st">Contextual and generic presentation of transistors</span></a></li><li><a href="ch4.html#c4-sec-caracteristiques"><span class="sn">4.2</span><span class="st">Understanding the bipolar transistor through its characteristics</span></a></li><li><a href="ch4.html#c4-sec-generique"><span class="sn">4.3</span><span class="st">The generic circuit: load lines and operating point</span></a></li><li><a href="ch4.html#c4-sec-commutation"><span class="sn">4.4</span><span class="st">Switching: linear models and states of the transistor</span></a></li><li><a href="ch4.html#c4-sec-petit-signal"><span class="sn">4.5</span><span class="st">The small-signal model</span></a></li><li><a href="ch4.html#c4-sec-polarisation"><span class="sn">4.6</span><span class="st">Bias circuits</span></a></li><li><a href="ch4.html#c4-sec-zener"><span class="sn">4.7</span><span class="st">Case study 1: a current source with a Zener diode</span></a></li><li><a href="ch4.html#c4-sec-cascode"><span class="sn">4.8</span><span class="st">Case study 2: the cascode</span></a></li><li><a href="ch4.html#c4-sec-verif"><span class="sn">4.9</span><span class="st">Check your understanding</span></a></li><li><a href="ch4.html#sec-4-10"><span class="sn">4.10</span><span class="st">Summary</span></a></li><li><a href="ch4.html#c4-sec-exercices"><span class="sn">4.11</span><span class="st">Exercises</span></a></li></ol></details></li><li class="nc"><details><summary><a href="ch5.html" class="nc-a"><span class="badge">5</span><span class="nc-t">The three amplifier configurations</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="ch5.html#c5-sec-trois"><span class="sn">5.1</span><span class="st">Three ways of connecting a transistor</span></a></li><li><a href="ch5.html#c5-sec-couplage"><span class="sn">5.2</span><span class="st">Isolating the bias from the signal: coupling and bypassing</span></a></li><li><a href="ch5.html#c5-sec-methode"><span class="sn">5.3</span><span class="st">The common method: superposition and two-port</span></a></li><li><a href="ch5.html#c5-sec-ce"><span class="sn">5.4</span><span class="st">Common emitter</span></a></li><li><a href="ch5.html#c5-sec-excursion"><span class="sn">5.5</span><span class="st">Signal swing: the AC load line</span></a></li><li><a href="ch5.html#c5-sec-cc"><span class="sn">5.6</span><span class="st">Common collector (emitter follower)</span></a></li><li><a href="ch5.html#c5-sec-cb"><span class="sn">5.7</span><span class="st">Common base</span></a></li><li><a href="ch5.html#c5-sec-synthese"><span class="sn">5.8</span><span class="st">Summary table</span></a></li><li><a href="ch5.html#c5-sec-cascade"><span class="sn">5.9</span><span class="st">Question 1: what happens with several cascaded stages?</span></a></li><li><a href="ch5.html#c5-sec-hf"><span class="sn">5.10</span><span class="st">Question 2: what happens at high frequencies?</span></a></li><li><a href="ch5.html#sec-5-11"><span class="sn">5.11</span><span class="st">Check your understanding</span></a></li><li><a href="ch5.html#sec-5-12"><span class="sn">5.12</span><span class="st">Summary</span></a></li><li><a href="ch5.html#c5-sec-exos"><span class="sn">5.13</span><span class="st">Exercises</span></a></li></ol></details></li></ol><div class="side-h">Annexes · outside the 21 hours</div><ol class="chaps"><li class="nc"><details><summary><a href="annA.html" class="nc-a"><span class="badge">A</span><span class="nc-t">Operational amplifiers</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="annA.html#sec-A-1"><span class="sn">A.1</span><span class="st">The method and the amplifier model</span></a></li><li><a href="annA.html#sec-A-2"><span class="sn">A.2</span><span class="st">Case I: charging a capacitor</span></a></li><li><a href="annA.html#sec-A-3"><span class="sn">A.3</span><span class="st">Case II: the RC follower with finite gain</span></a></li><li><a href="annA.html#sec-A-4"><span class="sn">A.4</span><span class="st">Case III: an input that changes in steps</span></a></li><li><a href="annA.html#sec-A-5"><span class="sn">A.5</span><span class="st">Case IV: the inverting Schmitt trigger</span></a></li><li><a href="annA.html#sec-A-6"><span class="sn">A.6</span><span class="st">Case V: the relaxation oscillator</span></a></li><li><a href="annA.html#cA-sec-gain"><span class="sn">A.7</span><span class="st">What happens when the gain decreases?</span></a></li><li><a href="annA.html#sec-A-8"><span class="sn">A.8</span><span class="st">Conclusion: a method, not a collection of recipes</span></a></li></ol></details></li><li class="nc"><details><summary><a href="annB.html" class="nc-a"><span class="badge">B</span><span class="nc-t">Energy and power</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="annB.html#sec-B-1"><span class="sn">B.1</span><span class="st">Power and energy: what we already know</span></a></li><li><a href="annB.html#cB-sec-stockee"><span class="sn">B.2</span><span class="st">The energy stored in a capacitor</span></a></li><li><a href="annB.html#cB-sec-charger"><span class="sn">B.3</span><span class="st">Charging and discharging a capacitor</span></a></li><li><a href="annB.html#sec-B-4"><span class="sn">B.4</span><span class="st">The NMOS gate with resistive load</span></a></li><li><a href="annB.html#sec-B-5"><span class="sn">B.5</span><span class="st">The CMOS inverter</span></a></li><li><a href="annB.html#sec-B-6"><span class="sn">B.6</span><span class="st">Beyond the inverter: CMOS gates</span></a></li><li><a href="annB.html#sec-B-7"><span class="sn">B.7</span><span class="st">Ideal steady state and switching losses</span></a></li><li><a href="annB.html#sec-B-8"><span class="sn">B.8</span><span class="st">Conclusion</span></a></li></ol></details></li><li class="nc"><details><summary><a href="annC.html" class="nc-a"><span class="badge">C</span><span class="nc-t">Precision rectification</span></a><span class="nc-x" aria-hidden="true"></span></summary><ol class="toc"><li><a href="annC.html#sec-C-1"><span class="sn">C.1</span><span class="st">The circuit, the model and the quantities</span></a></li><li><a href="annC.html#sec-C-2"><span class="sn">C.2</span><span class="st">Negative input: the diode is off</span></a></li><li><a href="annC.html#sec-C-3"><span class="sn">C.3</span><span class="st">Positive input: the loop closes again</span></a></li><li><a href="annC.html#sec-C-4"><span class="sn">C.4</span><span class="st">The role of the finite gain and of the diode threshold</span></a></li><li><a href="annC.html#sec-C-5"><span class="sn">C.5</span><span class="st">The waveforms</span></a></li><li><a href="annC.html#cC-sec-realiste"><span class="sn">C.6</span><span class="st">Realistic gain: saturation and recovery</span></a></li><li><a href="annC.html#cC-sec-valeur-absolue"><span class="sn">C.7</span><span class="st">From simple rectification to absolute value</span></a></li><li><a href="annC.html#sec-C-8"><span class="sn">C.8</span><span class="st">The circuit of figure 1 of the note</span></a></li><li><a href="annC.html#sec-C-9"><span class="sn">C.9</span><span class="st">Reading guide for the note</span></a></li><li><a href="annC.html#sec-C-10"><span class="sn">C.10</span><span class="st">Conclusion</span></a></li></ol></details></li></ol><div class="side-h">References</div><ol class="chaps"><li class="nc"><a class="nc-a solo" href="bibliographie.html"><span class="badge">≡</span><span class="nc-t">Bibliography</span></a></li></ol></div></aside><div class="side-veil" id="veil"></div><main class="main" id="main"><header class="chap-head"><div class="chap-k">CHAPTER 0</div><h1>Engineering first</h1><p class="chap-kw">The profession, the gap between courses and practice, and the approach this course takes</p><p class="chap-links"><a class="chip" href="ex0.html"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3 21l3.8-1 11-11-2.8-2.8-11 11zM14 6.2l2.8 2.8"></path></svg> Exercises and solutions</a><a class="chip" href="pdf/EA1_Course_Notes_EN.pdf"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM15 2v5h5"></path></svg> Course notes (PDF)</a></p></header><article class="course">
+<div class="box situ"><p class="t">Why this chapter</p>
+<p>Before studying a component, let us look at the person who will handle it. This chapter sets out what the engineering profession is, why analog electronics remains fundamental in an industry focused on digital technology, and above all the approach this course expects in front of every new circuit: do not start by calculating, but by deciding what needs to be known.</p>
+</div>
+<section id="plan-du-chapitre" class="level3 unnumbered">
+<h3 class="unnumbered">Chapter outline</h3>
+<div class="tw"><table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">§</th>
+<th style="text-align: left;">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">The engineer’s profession</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">The gap between courses and practice</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.3</td>
+<td style="text-align: left;">Why analog still matters</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.4</td>
+<td style="text-align: left;">The two faces of the profession: analysis and design</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.5</td>
+<td style="text-align: left;">The rule of the course: the chain of reasoning</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.6</td>
+<td style="text-align: left;">Why analog electronics is good training ground</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.7</td>
+<td style="text-align: left;">The rest of the programme</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0.8</td>
+<td style="text-align: left;">Summary</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0.9</td>
+<td style="text-align: left;">Exercises</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="objectifs-dapprentissage" class="level3 unnumbered">
+<h3 class="unnumbered">Learning objectives</h3>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><p>define engineering as the act of recognising a problem, finding what is missing, closing the gap and checking the result;</p></li>
+<li><p>recognise which of the roles of inventor, researcher or technician corresponds to a given engineering task;</p></li>
+<li><p>explain, with a concrete example, why the physical world remains analog, even in a digital system;</p></li>
+<li><p>distinguish analysis (predicting the behaviour of a known circuit) from design (finding a circuit for a desired behaviour), and say why analysis comes first;</p></li>
+<li><p>apply the chain of reasoning of the course (question, model and validity, regime, abstraction, tool, calculation, check) in front of any new circuit.</p></li>
+</ol>
+</section>
+<section id="num0.1ac0-sec-metierthe-engineers-profession" class="level2 unnumbered">
+<h2 id="c0-sec-metier" class="unnumbered"><span class="num">0.1</span>The engineer’s profession</h2>
+<p>The word “engineer” calls up several images at once. Three of them each describe a real part of the profession.</p>
+<p>The <strong>inventor</strong> answers a need with a new solution: a patent and a prototype are enough, and industrialisation is another profession. The <strong>researcher</strong> extends what is known and builds models. The <strong>technician</strong> keeps real systems working: they measure, repair and keep things running.</p>
+<p>These three roles share one act: someone meets a problem, understands it, and produces something useful. That is the engineering profession. Depending on the problem, you will move from one role to another. The fourth face, that of the designer, is the subject of section <a href="#c0-sec-faces">0.4</a>.</p>
+</section>
+<section id="num0.2ac0-sec-ecartthe-gap-between-courses-and-practice" class="level2 unnumbered">
+<h2 id="c0-sec-ecart" class="unnumbered"><span class="num">0.2</span>The gap between courses and practice</h2>
+<p>This course teaches fundamentals. They form a common language that no engineer can do without. But after graduation, problems arrive without a chapter number: technology changes constantly, and components appear and then disappear.</p>
+<p>Suppose a circuit contains a component you have never met. “It was not in the syllabus” is not a useful answer. A useful answer proceeds step by step. What does this component do? What do you already know that applies? What model can you derive from it? What remains to be learnt, and where: datasheet, book, simulation, measurement, colleague, artificial intelligence assistant? Once the thing is learnt, how do you check that you have understood it?</p>
+<div class="box bilan"><p class="t">Key points</p>
+<p>Learning engineering does not mean memorising a toolbox. It means <strong>recognising a problem, finding what is missing, closing the gap, and checking the result</strong>. Remember this sentence: it comes back in every chapter of the course.</p>
+</div>
+</section>
+<section id="num0.3asec-0-3why-analog-still-matters" class="level2 unnumbered">
+<h2 id="sec-0-3" class="unnumbered"><span class="num">0.3</span>Why analog still matters</h2>
+<p>Digital technology is everywhere; it is therefore legitimate to ask why we still study analog electronics. The answer lies in where signals come from. Sensors, microphones, antennas, power supplies and communication channels produce and receive voltages and currents that vary continuously in time: analog quantities. <strong>The physical world is analog.</strong></p>
+<p>Radio illustrates this fact well. We use it here for its functions, not for its history (figure <a href="#c0-fig-radio">0.1</a>).</p>
+<figure id="c0-fig-radio"><div class="paper"><img src="img/ch0-1.svg" width="518" height="87" alt="Radio as a map of analog functions. Everything that comes before digital processing is analog." loading="lazy"></div>
+<figcaption><b>Figure 0.1.</b> Radio as a map of analog functions. Everything that comes before digital processing is analog.</figcaption></figure>
+<p>Amplification, filtering, oscillation, rectification, detection and interfacing all sit between the real world and the slightest digital calculation. Without the analog part, the digital part has nothing to process.</p>
+</section>
+<section id="num0.4ac0-sec-facesthe-two-faces-of-the-profession-analysis-and-design" class="level2 unnumbered">
+<h2 id="c0-sec-faces" class="unnumbered"><span class="num">0.4</span>The two faces of the profession: analysis and design</h2>
+<p>Let us come back to the fourth face announced in section <a href="#c0-sec-metier">0.1</a>, that of the designer. In front of a circuit, the engineer may seek to predict what it does, or seek the circuit that does what they want: the profession has two faces, summed up by two words (table <a href="#c0-tab-faces">0.1</a>).</p>
+<figure class="tab" id="c0-tab-faces"><figcaption><b>Table 0.1.</b> Analysis and design.</figcaption>
+<div class="tw"><table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><strong>Analysis</strong></th>
+<th style="text-align: left;"><strong>Design</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Approach</td>
+<td style="text-align: left;">Starts from a known circuit and predicts what it will do.</td>
+<td style="text-align: left;">Starts from a desired behaviour and looks for the circuit that achieves it.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tools</td>
+<td style="text-align: left;">Laws, equations, models, characteristics, time-domain and frequency-domain methods.</td>
+<td style="text-align: left;">Datasheets, simulation, layout, measurement, trial and error.</td>
+</tr>
+</tbody>
+</table></div></figure>
+<p>The gap between the two matters: analysis tells what a circuit does, never which circuit to build. Choosing among several valid solutions is a matter of judgement under constraints, the part of engineering that resembles an art. This course trains both, analysis first: judging without models amounts to guessing.</p>
+</section>
+<section id="num0.5ac0-sec-chainethe-rule-of-the-course-the-chain-of-reasoning" class="level2 unnumbered">
+<h2 id="c0-sec-chaine" class="unnumbered"><span class="num">0.5</span>The rule of the course: the chain of reasoning</h2>
+<p>One habit comes before all others: <strong>do not start by calculating</strong>. Start by deciding what needs to be known. Then follow this chain, every time (figure <a href="#c0-fig-chaine">0.2</a>).</p>
+<figure id="c0-fig-chaine"><div class="paper"><img src="img/ch0-2.svg" width="592" height="110" alt="The chain of reasoning of the course, in seven steps. If the result is not plausible, the check sends you back to the choice of model." loading="lazy"></div>
+<figcaption><b>Figure 0.2.</b> The chain of reasoning of the course, in seven steps. If the result is not plausible, the check sends you back to the choice of model.</figcaption></figure>
+<ul>
+<li><p><strong>Question</strong>: what needs to be known, and how accurately?</p></li>
+<li><p><strong>Model and validity</strong>: which representation of the component, and in what range is it valid?</p></li>
+<li><p><strong>Regime</strong>: DC, small signal, large signal, transient, steady state?</p></li>
+<li><p><strong>Abstraction</strong>: can a block be replaced by a black box (Thévenin, two-port, feedback)?</p></li>
+<li><p><strong>Tool</strong>: which law or which method (Kirchhoff, superposition, phasors, Laplace, simulation)?</p></li>
+<li><p><strong>Calculation</strong>: only now.</p></li>
+<li><p><strong>Check</strong>: is the result plausible, and are the assumptions of the model respected?</p></li>
+</ul>
+<div class="box bilan"><p class="t">Key points</p>
+<p>Choose the simplest valid model that gives the accuracy the problem requires, then check. <strong>A model is not the circuit</strong>: it is a representation chosen for a specific purpose. Its assumptions must be known before trusting its answer.</p>
+</div>
+</section>
+<section id="num0.6asec-0-6why-analog-electronics-is-good-training-ground" class="level2 unnumbered">
+<h2 id="sec-0-6" class="unnumbered"><span class="num">0.6</span>Why analog electronics is good training ground</h2>
+<p>The same physical circuit can be seen through several models, from a detailed nonlinear description to a simple linear one. By working on analog circuits, you build the judgement needed to decide what to calculate, what to neglect, and whether a result makes physical sense. This habit carries over to every field of engineering.</p>
+</section>
+<section id="num0.7ac0-sec-programmethe-rest-of-the-programme-21-hours" class="level2 unnumbered">
+<h2 id="c0-sec-programme" class="unnumbered"><span class="num">0.7</span>The rest of the programme (21 hours)</h2>
+<ul>
+<li><p><strong>Chapter 1: From electrical quantities to linear models.</strong> Quantities, component relations, Kirchhoff’s laws; the diode makes the circuit transcendental; linear models and operating point; superposition, Thévenin, Norton; piecewise large-signal model; the need for small signal and the linearisation procedure; two-port network.</p></li>
+<li><p><strong>Chapter 2: Time-domain analysis of linear circuits.</strong> The RC circuit driven by a square wave, studied by four methods (measurement, differential equation, numerical calculation, Fourier and phasors) extended by the Laplace transform; resonance of an LC circuit; then from the relaxation oscillator to feedback.</p></li>
+<li><p><strong>Chapter 3: The diode and its applications.</strong> Exponential model, large-signal and small-signal models; rectification, peak detection, voltage doubler, clamper, freewheeling diode; case study of a biased LED; Graetz bridge, precision rectifier and synchronous detection.</p></li>
+<li><p><strong>Chapter 4: The bipolar transistor and its biasing.</strong> Characteristics, load lines, switching, small-signal <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.29ex" height="1ex" role="img" focusable="false" viewBox="0 -431 570 442" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D70B" xlink:href="#MJX-TEX-I-1D70B"></use></g></g></g></svg></mjx-container></span> model; amplifier classes; bias circuits; Zener current source, current mirror and cascode.</p></li>
+<li><p><strong>Chapter 5: The three basic amplifier configurations.</strong> Common emitter, common collector and common base seen as two-port networks; coupling and decoupling; output resistance <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="9.3ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4110.4 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="28" xlink:href="#MJX-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(389,0)"><use data-c="1D6FD" xlink:href="#MJX-TEX-I-1D6FD"></use></g><g data-mml-node="mo" transform="translate(1177.2,0)"><use data-c="2B" xlink:href="#MJX-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(2177.4,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(2677.4,0)"><use data-c="29" xlink:href="#MJX-TEX-N-29"></use></g><g data-mml-node="mstyle" transform="translate(3066.4,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="msub" transform="translate(3233.4,0)"><g data-mml-node="mi"><use data-c="1D45F" xlink:href="#MJX-TEX-I-1D45F"></use></g><g data-mml-node="mi" transform="translate(484,-150) scale(0.707)"><use data-c="1D45C" xlink:href="#MJX-TEX-I-1D45C"></use></g></g></g></g></svg></mjx-container></span> and cascode; cascaded stages; high-frequency limit (Giacoletto model, Miller effect).</p></li>
+</ul>
+<p>Chapter 1 draws the map and chapter 2 adds time to it. Chapters 3 to 5 travel through it on real components, the diode then the bipolar transistor and its configurations, introducing theory only when it is needed. Each component follows the same sequence: characteristic, operating point and biasing, small-signal model, then superposition to extract the circuit quantities.</p>
+<div class="box open"><p class="t">The first reflex</p>
+<p>In chapter 1, the first question will therefore not be “which equation applies here?” but “how should this circuit be represented to answer the question, efficiently and with acceptable accuracy?”</p>
+</div>
+</section>
+<section id="num0.8asec-0-8summary" class="level2 unnumbered">
+<h2 id="sec-0-8" class="unnumbered"><span class="num">0.8</span>Summary</h2>
+<ul>
+<li><p>The engineer recognises a problem, finds what is missing, closes the gap and checks the result. Inventor, researcher and technician are three facets of one act.</p></li>
+<li><p>Real problems arrive without a chapter number: you must know how to learn a new component and check that you have understood it.</p></li>
+<li><p>The physical world is analog; the analog part of a system (amplify, filter, oscillate, rectify, detect, interface) comes before any digital processing.</p></li>
+<li><p>Analysis predicts the behaviour of a known circuit; design looks for a circuit for a desired behaviour. Analysis is learnt first.</p></li>
+<li><p>The rule of the course: question, model and validity, regime, abstraction, tool, calculation, check. A model is not the circuit.</p></li>
+</ul>
+</section>
+<section id="num0.9asec-0-9exercises" class="level2 unnumbered">
+<h2 id="sec-0-9" class="unnumbered"><span class="num">0.9</span>Exercises</h2>
+<p>The exercises for this chapter are collected in the tutorial problem book, in the section “Course application exercises” of chapter 0; their answers are in the tutorial solutions book, in the same place.</p>
+</section>
+
+</article><nav class="pn" aria-label="Previous and next page"><span></span><a class="next" href="ch1.html"><small>Next →</small>Chapter 1 · Quantities and linear models</a></nav></main></div>
+<footer class="foot"><span>ENISO 2026/2027</span><span>Dr Bassem CHAABANE</span><span>Analog Electronics 1</span></footer>
+<div class="foot-more" lang="en">
+<p>© 2026 Bacem Chaabane · Teaching content under the <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a> licence. Third-party documents cited (application notes, books, lectures) remain the property of their authors and publishers.</p>
+<p>Notes to the author: <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5BAnalog%20Electronics%201%5D%20Question%20%E2%80%93%20Chapter%200%20%C2%B7%20Engineering%20first&amp;body=Page%3A%20Chapter%200%20%C2%B7%20Engineering%20first%0D%0ASection%2C%20equation%2C%20figure%20or%20exercise%3A%0D%0A%0D%0AMy%20question%3A%0D%0A%0D%0A">Question</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5BAnalog%20Electronics%201%5D%20Suggestion%20%E2%80%93%20Chapter%200%20%C2%B7%20Engineering%20first&amp;body=Page%3A%20Chapter%200%20%C2%B7%20Engineering%20first%0D%0ASection%20concerned%3A%0D%0A%0D%0AMy%20suggestion%3A%0D%0A%0D%0A">Suggestion</a> · <a href="mailto:bacem.chaabane@eniso.u-sousse.tn?subject=%5BAnalog%20Electronics%201%5D%20Error%20report%20%E2%80%93%20Chapter%200%20%C2%B7%20Engineering%20first&amp;body=Page%3A%20Chapter%200%20%C2%B7%20Engineering%20first%0D%0ASection%2C%20equation%2C%20figure%20or%20exercise%3A%0D%0A%0D%0ADescription%20of%20the%20error%3A%0D%0A%0D%0AProposed%20correction%20%28optional%29%3A%0D%0A%0D%0A">Report an error</a>
+</p>
+</div>
+<script src="assets/site.js"></script><script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('figure .paper img'));
+  if(!imgs.length) return;
+  var dlg=document.createElement('div'); dlg.className='zoom'; dlg.hidden=true;
+  dlg.setAttribute('role','dialog'); dlg.setAttribute('aria-modal','true'); dlg.setAttribute('aria-label','Enlarged figure');
+  dlg.innerHTML='<div class="zoom-bar"><b class="zoom-t"></b><span class="zoom-g">'
+    +'<button type="button" data-z="-1" aria-label="Zoom out">−</button><button type="button" data-z="0">Fit</button>'
+    +'<button type="button" data-z="1" aria-label="Zoom in">+</button></span>'
+    +'<a class="zoom-o" target="_blank" rel="noopener">Open the image alone</a>'
+    +'<button type="button" class="zoom-x" aria-label="Close">✕</button></div>'
+    +'<div class="zoom-sc"><div class="zoom-pp"><img alt=""></div></div><div class="zoom-c"></div>';
+  document.body.appendChild(dlg);
+  var im=dlg.querySelector('img'), sc=dlg.querySelector('.zoom-sc'), cap=dlg.querySelector('.zoom-c'),
+      ttl=dlg.querySelector('.zoom-t'), op=dlg.querySelector('.zoom-o'), bx=dlg.querySelector('.zoom-x');
+  var w0=1, h0=1, k=1, fit=1, back=null;
+  function size(){ im.style.width=Math.round(w0*k)+'px'; im.style.height=Math.round(h0*k)+'px'; }
+  function setFit(){ var w=sc.clientWidth-56, h=sc.clientHeight-56; fit=Math.max(0.5,Math.min(4,w/w0,h/h0)); k=fit; size(); }
+  function open(img){
+    back=document.activeElement;
+    w0=+img.getAttribute('width')||img.naturalWidth||400; h0=+img.getAttribute('height')||img.naturalHeight||300;
+    im.src=img.currentSrc||img.src; im.alt=img.alt; op.href=im.src;
+    var fig=img.closest('figure'), fc=fig&&fig.querySelector('figcaption'), sub=img.closest('.sch');
+    var sl=sub&&sub.querySelector('.sl');
+    cap.innerHTML=(sl?sl.innerHTML+' ':'')+(fc?fc.innerHTML:'');
+    var b=fc&&fc.querySelector('b'); ttl.textContent=b?b.textContent.replace(/[.\s]+$/,''):'Figure';
+    dlg.hidden=false; document.body.classList.add('zoomed'); setFit(); sc.scrollTop=0; sc.scrollLeft=0; bx.focus();
+  }
+  function close(){ dlg.hidden=true; document.body.classList.remove('zoomed'); im.removeAttribute('src'); if(back&&back.focus) back.focus(); }
+  imgs.forEach(function(img){
+    var p=img.closest('.paper'); p.classList.add('zoomable');
+    var btn=document.createElement('button'); btn.type='button'; btn.className='zbtn'; btn.innerHTML='<span aria-hidden="true">⤢</span> Enlarge';
+    btn.setAttribute('aria-label','Enlarge the figure'); p.parentNode.insertBefore(btn,p.nextSibling);   // sous le cadre : ne recouvre jamais le dessin
+    btn.addEventListener('click',function(){open(img);}); img.addEventListener('click',function(){open(img);});
+  });
+  dlg.querySelector('.zoom-g').addEventListener('click',function(e){var z=e.target.closest('button'); if(!z) return;
+    var d=+z.dataset.z; if(d===0) setFit(); else {k=Math.max(0.5,Math.min(10,k*(d>0?1.4:1/1.4))); size();}});
+  bx.addEventListener('click',close);
+  sc.addEventListener('click',function(e){if(e.target===sc) close();});
+  document.addEventListener('keydown',function(e){ if(dlg.hidden) return;
+    if(e.key==='Escape'){e.preventDefault(); close();}
+    else if(e.key==='+'||e.key==='='){k=Math.min(10,k*1.4); size();} else if(e.key==='-'){k=Math.max(0.5,k/1.4); size();}
+    else if(e.key==='Tab'){var f=[].slice.call(dlg.querySelectorAll('button,a[href]')); var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault(); f[f.length-1].focus();} else if(!e.shiftKey&&i===f.length-1){e.preventDefault(); f[0].focus();}}});
+  window.addEventListener('resize',function(){ if(!dlg.hidden&&Math.abs(k-fit)<1e-6) setFit(); });
+})();
+</script><script>
+(function(){
+  function fit(){[].forEach.call(document.querySelectorAll('.course span.math.inline'),function(s){
+    s.classList.remove('long'); var c=s.closest('p,li,td,div'); if(!c) return;
+    if(s.getBoundingClientRect().width>c.getBoundingClientRect().width) s.classList.add('long');});}
+  fit(); window.addEventListener('load',fit); window.addEventListener('resize',fit);
+})();
+</script>
+<svg style="display: none;" id="MJX-SVG-global-cache"><defs><path id="MJX-TEX-I-1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path><path id="MJX-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-TEX-I-1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path><path id="MJX-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-TEX-I-1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></defs></svg><script data-goatcounter="https://bcha-courses.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>
